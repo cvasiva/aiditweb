@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.18",
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@types/react-icons": "^3.0.0",
