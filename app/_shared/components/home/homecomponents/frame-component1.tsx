@@ -32,29 +32,47 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <h3 className={styles.cloudServices}>Cloud Services</h3>
                 <div className={styles.groupIcon}>
                   <div>View Details</div>
-                  <div><IoIosArrowForward className="fw-bold " /></div>
+                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
                 </div>
                 <div className={styles.hovreffect}></div>
               </div>
-              <div className={styles.sectionLinkWorkplacePen}>
+              <div className={styles.sectionLinkHealthInsura12}>
+                <div className={styles.divcPjlv} />
+                <div className={styles.healthIcon} />
+                <h3 className={styles.cloudServices}>Infrastructure Solution</h3>
+                <div className={styles.groupIcon}>
+                  <div>View Details</div>
+                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
+                </div>
+                <div className={styles.hovreffect}></div>
+              </div>
+              <div className={styles.sectionLinkHealthInsura22}>
+                <div className={styles.divcPjlv} />
+                <div className={styles.healthIcon} />
+                <h3 className={styles.cloudServices}>Cybersecurity Offerings</h3>
+                <div className={styles.groupIcon}>
+                  <div>View Details</div>
+                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
+                </div>
+                <div className={styles.hovreffect}></div>
+              </div>
+              {/* <div className={styles.sectionLinkWorkplacePen}>
                 <img
                   className={styles.freepikExport20240514221652yIcon}
                   loading="lazy"
                   alt=""
                   src="/freepikexport20240514221652yqgt-1@2x.png"
                 />
-                <div className={styles.divcPjlvParent}>
-                  <div className={styles.divcPjlv1} />
-                  <div className={styles.pcGvnpxb} />
-                  <div className={styles.pensionLifeIcons} />
-                  <h3 className={styles.infrastructureSolution}>
-                    Infrastructure Solution
-                  </h3>
-                  <img
-                    className={styles.groupIcon1}
-                    alt=""
-                    src="/group-2@2x.png"
-                  />
+                 <div className={styles.divcPjlvGroup}>
+                  <div className={styles.divcPjlv2} />
+                  <div className={styles.pcGvnpxb1} />
+                  <div className={styles.frameChild} />
+                  <h3 className={styles.infrastructureSolution}>Infrastructure Solution</h3>
+                  <div className={styles.groupIcon}>
+                    <div>View Details</div>
+                    <div><IoIosArrowForward className="fw-bold" fontSize={20} /></div>
+                  </div>
+                  <div className={styles.hovreffect}></div>
                 </div>
               </div>
               <div className={styles.sectionLinkLifeInsuranc}>
@@ -67,16 +85,14 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                   <div className={styles.divcPjlv2} />
                   <div className={styles.pcGvnpxb1} />
                   <div className={styles.frameChild} />
-                  <h3 className={styles.cybersecurityOfferings}>
-                    Cybersecurity Offerings
-                  </h3>
-                  <img
-                    className={styles.groupIcon2}
-                    alt=""
-                    src="/group-2@2x.png"
-                  />
+                  <h3 className={styles.infrastructureSolution}>Cybersecurity Offerings</h3>
+                  <div className={styles.groupIcon2}>
+                    <div>View Details</div>
+                    <div><IoIosArrowForward className="fw-bold " /></div>
+                  </div>
+                  <div className={styles.hovreffect}></div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className={styles.section1}>
               <div className={styles.pcGvnpxb2} />
@@ -86,10 +102,10 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 >{`IT Strategy & Consulting`}</h1>
                 <div className={styles.formulationAndExecutionContainer}>
                   <p className={styles.formulationAndExecution}>
-                  Formulation and execution of a technology roadmap that aligns
-                  with an organization's overall business objectives. 
+                    Formulation and execution of a technology roadmap that aligns
+                    with an organization's overall business objectives.
                   </p>
-                  
+
                 </div>
               </div>
               <div className={styles.divcPjlv3} />

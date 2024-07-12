@@ -240,6 +240,95 @@
   transform: scale(1.1);
 }
 
+.sectionLinkHealthInsura22 {
+  border-radius: var(--br-3xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-32xl) var(--padding-xl) var(--padding-370xl) var(--padding-12xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xs);
+  background-image: url(/image-104296@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  cursor: pointer;
+  height: 31rem;
+}
+
+.sectionLinkHealthInsura22:hover {
+  border-radius: var(--br-3xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-32xl) var(--padding-xl) var(--padding-370xl) var(--padding-12xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xs);
+  background-image: url(/image-104296@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  cursor: pointer;
+  height: 31rem;
+  transition: all 0.5s ease 0s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1);
+  transform: scale(1.1);
+}
+
+.sectionLinkHealthInsura12 {
+  border-radius: var(--br-3xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-32xl) var(--padding-xl) var(--padding-370xl) var(--padding-12xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xs);
+  background-image: url(/freepikexport20240514221652yqgt-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  cursor: pointer;
+  background-color: var(--color-gray-500);
+  height: 31rem;
+}
+
+.sectionLinkHealthInsura12:hover {
+  border-radius: var(--br-3xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-32xl) var(--padding-xl) var(--padding-370xl) var(--padding-12xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-xs);
+  background-image: url(/freepikexport20240514221652yqgt-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  cursor: pointer;
+  height: 31rem;
+  transition: all 0.5s ease 0s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1);
+  transform: scale(1.1);
+}
+
 .freepikExport20240514221652yIcon {
   position: absolute;
   top: 8.375rem;
@@ -397,6 +486,12 @@
   height: 1.125rem;
   object-fit: contain;
   z-index: 3;
+  font-size: 16px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 400;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .divcPjlvGroup {
