@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useEffect, useMemo, type CSSProperties } from "react";
 import styles from "./group-component.module.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 export type GroupComponentType = {
   className?: string;
   ellipse271?: string;
@@ -58,9 +59,11 @@ const GroupComponent: NextPage<GroupComponentType> = ({
       gap: propGap1,
     };
   }, [propGap1]);
-
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <div
+    <div  data-aos="flip-left"
       className={[styles.rectangleParent, className].join(" ")}
       style={groupDivStyle}
     >

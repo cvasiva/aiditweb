@@ -14,8 +14,10 @@
   font-size: var(--font-size-mid-9);
   line-height: 1.688rem;
   font-family: var(--font-source-sans-pro);
-  color: var(--color-gray-1300);
   text-align: justify;
+  font-family: "Geologica", Helvetica;
+  color: #555555;
+  font-weight: 300;
 }
 .newsTitleContainer {
   width: 40.463rem;

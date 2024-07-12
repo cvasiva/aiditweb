@@ -6,6 +6,46 @@
   font-weight: 500;
 }
 
+
+.viewMore {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.viewMore:focus,
+.viewMore:hover {
+  color: #fff;
+}
+
+.viewMore:focus:after,
+.viewMore:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.viewMore:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 .section,
 .sectionWrapper {
   display: flex;
@@ -88,10 +128,55 @@
   z-index: 1;
 }
 
-.cloudServices,
+.viewdetailsflex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .groupIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  font-size: 16px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.groupIcon:focus,
+.groupIcon:hover {
+  color: #fff;
+ 
+}
+
+.groupIcon:focus:after,
+.groupIcon:hover:after {
+  width: 93%;
+  left: 0%;
+}
+
+.groupIcon:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .cloudServices {
@@ -101,7 +186,7 @@
   font-weight: 400;
   font-family: inherit;
   display: inline-block;
-  max-width: 49%;
+  /* max-width: 49%; */
 }
 
 .groupIcon {
@@ -397,14 +482,20 @@
 .itStrategy {
   margin: 0;
   width: 24.063rem;
-  font-size: inherit;
+  font-size: 37.5px;
   line-height: 2.125rem;
-  font-weight: 700;
-  font-family: inherit;
+  font-weight: 400;
+  font-family: "Geologica", Helvetica;
   display: flex;
   align-items: center;
+  text-wrap: nowrap;
 }
-
+.formulationAndExecution{
+  font-family: "Geologica", Helvetica;
+  color: #555555;
+  font-weight: 300;
+  
+}
 .formulationAndExecution,
 .withAnOrganizations {
   margin: 0;
@@ -729,6 +820,9 @@
   line-height: 2rem;
   display: inline-block;
   max-width: 100%;
+  color: #555555;
+  font-weight: 300;
+  font-family: "Geologica", Helvetica;
 }
 
 .vectorIcon2 {
@@ -887,6 +981,9 @@
   justify-content: flex-start;
   gap: var(--gap-88xl);
 }
+
+
+
 
 .homeInner {
   align-self: stretch;

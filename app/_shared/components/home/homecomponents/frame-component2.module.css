@@ -3,21 +3,22 @@
   height: 100%;
   position: absolute;
   margin: 0 !important;
-  top: 14px;
+  /* top: 14px; */
   right: 0;
   bottom: 0;
   left: 0;
-  backdrop-filter: blur(58.12px);
-  border-radius: var(--br-9xl);
-  background-color: var(--color-burlywood);
-  border: 1px solid var(--color-darkorange);
+  padding: 12rem;
+  backdrop-filter: blur(4px);
+  /* background-color: var(--color-burlywood); */
   box-sizing: border-box;
   z-index: 3;
+  border: 1.2px solid;
+  border-image: conic-gradient(var(--color-darkorange), var(--color-darkorange), transparent, transparent, transparent, var(--color-darkorange), var(--color-darkorange)) 1;
 }
 
 .homepageBannerIcon {
   width: 100%;
-  height: 101.5vh;
+  /* height: 101.5vh; */
   position: absolute;
   margin: 0 !important;
   top: 0rem;
@@ -278,14 +279,47 @@
   max-width: 100%;
   flex-shrink: 0;
 }
-
+.sectionLogos{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
 .sectionmaskGroupIcon {
-  width: 100%;
+  
+  width: 20%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
   position: relative;
   max-width: 78.747rem;
   overflow: hidden;
   max-height: 3.15rem;
   z-index: 3;
+}
+.sliderPosition{
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.positionBanner{
+  z-index: 2;
+  top: 15%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.positionLogos{
+  z-index: 2;
+  top: 86%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.sliderBg{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
 }
 
 .frameParent,
@@ -345,7 +379,6 @@
     top: 0rem;
     /* left: calc(50% - 760px); */
     object-fit: cover;
-
   }
 
   .deliverSeamlessMobileContainer {

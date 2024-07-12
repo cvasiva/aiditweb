@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useEffect, useMemo, type CSSProperties } from "react";
 import styles from "./testimonial.module.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 export type TestimonialType = {
   className?: string;
   oneOfTheBestCoachingClass?: string;
@@ -46,9 +47,11 @@ const Testimonial: NextPage<TestimonialType> = ({
       minWidth: propMinWidth1,
     };
   }, [propMinWidth1]);
-
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <div
+    <div data-aos="fade-up"
       className={[styles.testimonial, className].join(" ")}
       style={testimonialStyle}
     >

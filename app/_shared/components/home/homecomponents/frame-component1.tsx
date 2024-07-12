@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import styles from "./frame-component1.module.css";
-
+import { IoIosArrowForward } from "react-icons/io";
 export type FrameComponent1Type = {
   className?: string;
 };
-
 const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   return (
     <section className={[styles.homeInner, className].join(" ")}>
@@ -31,11 +30,10 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <div className={styles.divcPjlv} />
                 <div className={styles.healthIcon} />
                 <h3 className={styles.cloudServices}>Cloud Services</h3>
-                <img
-                  className={styles.groupIcon}
-                  alt=""
-                  src="/group-1@2x.png"
-                />
+                <div className={styles.groupIcon}>
+                  <div>View Details</div>
+                  <div><IoIosArrowForward className="fw-bold " /></div>
+                </div>
                 <div className={styles.hovreffect}></div>
               </div>
               <div className={styles.sectionLinkWorkplacePen}>
@@ -88,12 +86,10 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 >{`IT Strategy & Consulting`}</h1>
                 <div className={styles.formulationAndExecutionContainer}>
                   <p className={styles.formulationAndExecution}>
-                    formulation and execution of a technology roadmap that
-                    aligns
+                  Formulation and execution of a technology roadmap that aligns
+                  with an organization's overall business objectives. 
                   </p>
-                  <p
-                    className={styles.withAnOrganizations}
-                  >{`with an organization's overall business objectives. `}</p>
+                  
                 </div>
               </div>
               <div className={styles.divcPjlv3} />
@@ -189,5 +185,4 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
     </section>
   );
 };
-
 export default FrameComponent1;

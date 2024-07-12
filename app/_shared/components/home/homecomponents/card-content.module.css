@@ -72,7 +72,9 @@
   position: relative;
   font-size: var(--font-size-mid-3);
   line-height: 150.5%;
-  color: var(--color-gray-300);
+  font-family: "Geologica", Helvetica;
+  color: #555555;
+  font-weight: 300;
   display: inline-block;
 }
 .cardDivider {

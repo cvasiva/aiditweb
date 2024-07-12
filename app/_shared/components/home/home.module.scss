@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
 .homepageBannerIcon {
   width: 100%;
-  height: 101.5vh;
+  // height: 101.5vh;
   position: absolute;
   margin: 0 !important;
   top: 0rem;
@@ -130,6 +131,7 @@
 }
 
 .home {
+  font-family: "Geologica", Helvetica;
   flex-direction: column;
   justify-content: flex-start;
 }

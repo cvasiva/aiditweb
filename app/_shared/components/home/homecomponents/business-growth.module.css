@@ -48,10 +48,13 @@
   position: relative;
   font-size: var(--font-size-25xl-8);
   line-height: 3.736rem;
-  font-weight: 600;
+  font-weight: 400;
   flex-shrink: 0;
   z-index: 2;
   color: var(--color-white);
+  font-family: "Geologica", Helvetica;
+ 
+  font-weight: 300;
 }
 .growthContainer {
   align-self: stretch;

@@ -7,7 +7,6 @@ import cardbg1 from "../../home/Images/cardbg1.png"
 export type FrameComponent8Type = {
   className?: string;
 };
-
 const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
   return (
     <>
@@ -18,11 +17,9 @@ const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
           <div className={styles.mobileExperienceBackground} />
           <div className={styles.seamlessExperienceParent}>
             <div className={styles.seamlessExperience}>
-              <div className={styles.seamlessBackground} />
               <h2 className={styles.deliverSeamlessMobileContainer}>
                 <p className={styles.deliverSeamlessMobileWebEx}>
                   Protect Business
-
                 </p>
                 <p className={styles.withOurApplication}>
                   with Cybersecurity & Compliance
@@ -66,5 +63,4 @@ const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
     </>
   );
 };
-
 export default FrameComponent8;

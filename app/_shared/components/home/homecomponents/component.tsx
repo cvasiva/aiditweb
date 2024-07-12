@@ -19,7 +19,7 @@ const Component: NextPage<ComponentType> = ({ className = "" }) => {
         />
       </div>
       <div className={styles.scalabilityOptimalPerformanc}>
-        Scalability optimal performance
+        Innovative Problem Solving
       </div>
     </div>
   );

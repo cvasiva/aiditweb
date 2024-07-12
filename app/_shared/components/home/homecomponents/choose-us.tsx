@@ -13,13 +13,15 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
         <div className={styles.chooseContent}>
           <div className={styles.chooseHeading}>
             <div className={styles.headingTitleParent}>
-              
+              <div className={styles.flexheding}>
+              <div className={styles.horizantalBorder}><div style={{visibility:'hidden'}}>qdwjijiefwijerjirej</div></div>
               <div className={styles.whyChooseUs}>WHY CHOOSE US</div>
+              </div>
             </div>
             <div className={styles.headingBackground} />
             <div className={styles.industryHeading}>
               <h1 className={styles.howAiditIs}>
-                How Aidit is leading the Technology Industry
+              <b>AIDIT</b> is leading the Technology Industry
               </h1>
               <div className={styles.industryHeadingChild} />
             </div>

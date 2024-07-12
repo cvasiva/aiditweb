@@ -77,6 +77,8 @@
   height: 5.256rem;
   line-height: 150.5%;
   flex-shrink: 0;
+  color: #555555;
+  font-weight: 300;
 }
 .viewMore {
   line-height: 145.5%;
