@@ -12,11 +12,9 @@ const Cybersecurity = () => {
                     <div className={styles.mobileExperienceBackground} />
                     <div className={styles.seamlessExperienceParent}>
                         <div className={styles.seamlessExperience}>
-                            <div className={styles.seamlessBackground} />
                             <h2 className={styles.deliverSeamlessMobileContainer}>
                                 <p className={styles.deliverSeamlessMobileWebEx}>
                                     Protect Business
-
                                 </p>
                                 <p className={styles.withOurApplication}>
                                     with Cybersecurity & Compliance
@@ -59,5 +57,4 @@ const Cybersecurity = () => {
         </>
     )
 }
-
 export default Cybersecurity

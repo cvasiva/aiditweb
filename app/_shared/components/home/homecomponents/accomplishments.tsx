@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import styles from "./accomplishments.module.css";
-
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 export type AccomplishmentsType = {
   className?: string;
 };
@@ -17,7 +18,19 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
         </div>
         <div className={styles.statistics}>
           <div className={styles.yearsInIndustry}>
-            <b className={styles.years}>10 years</b>
+            {/* <b className={styles.years}>15 years</b> */}
+            <div className='d-flex'>
+                <CountUp end={15} duration={0.6} redraw={true}>
+                  {({ countUpRef, start }) => {
+                    return <>
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span className={`${styles.empty}  fw-bold`} ref={countUpRef} />
+                      </VisibilitySensor>
+                    </>
+                  }}
+                </CountUp>
+                <h1 className={`${styles.empty} ms-1 fw-bold`}>years</h1>
+              </div>
             <div className={styles.industryLabel}>
               <div className={styles.inIndustry}>In Industry</div>
             </div>
@@ -32,7 +45,19 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
           </div>
           <div className={styles.frameParent}>
             <div className={styles.emptyWrapper}>
-              <b className={styles.empty}>500+</b>
+              {/* <b className={styles.empty}>20+</b> */}
+              <div className='d-flex'>
+                <CountUp end={20} duration={0.6} redraw={true}>
+                  {({ countUpRef, start }) => {
+                    return <>
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span className={`${styles.empty}  fw-bold`} ref={countUpRef} />
+                      </VisibilitySensor>
+                    </>
+                  }}
+                </CountUp>
+                <h1 className={`${styles.empty} ms-1 fw-bold`}>+</h1>
+              </div>
             </div>
             <div className={styles.projectsCompleted}>Projects Completed</div>
           </div>

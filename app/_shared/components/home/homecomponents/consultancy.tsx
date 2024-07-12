@@ -98,9 +98,48 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
               <h1 className={styles.whatValueHas}>What value has it added?</h1>
             </div>
           </div>
-          {/* <ScrollCarousel autoplay autoplaySpeed={80} speed={5}> */}
           <div className={styles.valueBenefits}>
-            <Component />
+            
+            <div className={styles.div}>
+              {/* <div className={styles.child} /> */}
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/group-1707478881.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+              Innovative Problem Solving
+              </div>
+            </div>
+            <div className={styles.div}>
+              {/* <div className={styles.child} /> */}
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/customer_focus.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+              Customer Focus
+              Aproach
+              </div>
+            </div>
+            <div className={styles.div}>
+              {/* <div className={styles.child} /> */}
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/security.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+              Security with regulations
+              </div>
+            </div>
             <div className={styles.div}>
               {/* <div className={styles.child} /> */}
               <div className={styles.vectorContainer}>
@@ -111,21 +150,15 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                 />
               </div>
               <div className={styles.intelligentDecisionMaking}>
-                Intelligent decision-making
+              Sustainability and growth
               </div>
             </div>
-            <Component />
+            
+            
           </div>
-          <div className={styles.decisionMaking}>
-            <div className={styles.intelligentDecisionMaking1}>
-              Intelligent decision-making
-            </div>
-            <div className={styles.decisionIcon}>
-              <div className={styles.iconBackgroundShape} />
-              <img className={styles.vectorIcon3} alt="" src="/vector-6.svg" />
-            </div>
-          </div>
-          {/* </ScrollCarousel> */}
+         
+          
+         
         </div>
 
       </div>

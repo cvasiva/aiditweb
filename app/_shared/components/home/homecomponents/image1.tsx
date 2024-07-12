@@ -13,10 +13,10 @@ const Image1: NextPage<Image1Type> = ({ className = "", image }) => {
       <div className={styles.background} />
       <img className={styles.imageIcon} loading="lazy" alt="" src={image} />
       <div className={styles.tag}>
-        <div className={styles.analyze}>Analyze</div>
+        <div className={styles.analyze}>UX writing</div>
       </div>
       <div className={styles.tag1}>
-        <a className={styles.marketing}>Marketing</a>
+        <a className={styles.marketing}>UX writing</a>
       </div>
     </div>
   );

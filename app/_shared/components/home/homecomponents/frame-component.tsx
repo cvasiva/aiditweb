@@ -2,12 +2,17 @@
 import type { NextPage } from "next";
 import Testimonial from "./testimonial";
 import styles from "./frame-component.module.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export type FrameComponentType = {
   className?: string;
 };
 
 const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section className={[styles.careTeamWrapper, className].join(" ")}>
       <div className={styles.careTeam}>
@@ -52,20 +57,10 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
         </div>
         <div className={styles.testimonialCarousel}>
           <div className={styles.testimonialContainer}>
-            <div className={styles.testimonial}>
-              <div className={styles.bestExperienceOfClassesClParent}>
+            <div data-aos="fade-up"  className={styles.testimonial}>
+              <div  className={styles.bestExperienceOfClassesClParent}>
                 <div className={styles.bestExperienceOf}>
-                  Best experience of classes, clearly understanding of concepts
-                  of Banking Course and The Teachers are very friendly with the
-                  students and there you get course classes and doubt session
-                  classes. There are many bank coaching in Karnataka but Aanand
-                  academy is one of the best banking coaching for banking
-                  aspirant in Karnataka. Its library is open for 24×7 so its
-                  very useful for any banking student. Teachers here are amazing
-                  they give one to one attention to each and every student and
-                  help in conceptual understanding. They also provide regular
-                  series of class test and also conduct mock tests to keep a
-                  check on our preparation for the exam
+                For more than three years, AIDIT has been our trusted partner for all our IT service needs, consistently exceeding our expectations. Their unwavering reliability and exceptional efficiency in managing our IT infrastructure have been indispensable to our business operations. AIDIT's proactive approach to system maintenance is particularly noteworthy; they identify and address potential issues before they escalate, which has dramatically reduced downtime for our company. This foresight and diligence have not only enhanced our overall productivity but also resulted in significant cost savings over time. We truly value their commitment to excellence and look forward to continuing our successful partnership with them.
                 </div>
                 <div className={styles.info} />
               </div>
@@ -76,7 +71,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       className={styles.avatarIcon}
                       loading="lazy"
                       alt=""
-                      src="/avatar@2x.png"
+                      src="/Avatar1.png"
                     />
                     <div className={styles.userName}>
                       <div className={styles.annetteBlack}>Annette Black</div>
@@ -102,7 +97,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
               </div>
             </div>
             <Testimonial
-              oneOfTheBestCoachingClass="One of the best coaching classes for CA foundation in hubli. Teachers here are amazing they give one to one attention to each and every student and help in conceptual understanding. They also provide regular series of class test and also conduct mock tests to keep a check on our preparation for the exam."
+              oneOfTheBestCoachingClass="Transitioning to the cloud was a daunting task, but AIDIT made it seamless. Their expertise in cloud integration and management has transformed our business operations, making us more agile and efficient. Thanks to Chandrasekhar."
               avatar="/avatar-1@2x.png"
               sONALMADAN="SONAL MADAN"
               cAAspirant="CA Aspirant"
@@ -110,8 +105,8 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
           </div>
           <div className={styles.thirdTestimonial}>
             <Testimonial
-              oneOfTheBestCoachingClass="An appropriate place for banking/ssc aspirants where you will be made to invest your valuable time and effort to reach your goal. Quality of teaching is excellent and faculties are expertise in respective subjects. Additional facilities like lab and study room are provided. Overall best environment to study."
-              avatar="/avatar-2@2x.png"
+              oneOfTheBestCoachingClass="Our experience with AIDIT has been outstanding. Their customer support team is responsive, knowledgeable, and always willing to go the extra mile to resolve any issues we encounter. Our IT infrastructure has never been more reliable."
+              avatar="/Avatar2.png"
               sONALMADAN="Harsha Aladi"
               cAAspirant="Swift Pvt. Ltd."
               propPadding="var(--padding-12xl) var(--padding-15xl) var(--padding-10xl)"
@@ -121,10 +116,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
             />
             <div className={styles.testimonial1}>
               <div className={styles.bestExperienceOf1}>
-                Best experience of classes, clearly understanding of concepts of
-                CA Foundation Course and The Teachers are very friendly with the
-                students and there you get course classes and Double Rivision
-                classes and Doubt session classes.
+              In today's digital age, cybersecurity is paramount. AIDIT has been instrumental in safeguarding our sensitive data and ensuring our systems are secure. Their dedication to cybersecurity gives us peace of mind. Thanks to AIDIT Team.
               </div>
               <div className={styles.frameParent}>
                 <div className={styles.frameWrapper}>
@@ -164,7 +156,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
               </div>
             </div>
             <Testimonial
-              oneOfTheBestCoachingClass="This place is one of the best academy for ca foundation i must say, teachers here are the best who help with conceptual understanding and also give personalised attention. They also provide a series of mock test which helps in excelling in accuracy."
+              oneOfTheBestCoachingClass="The team at AIDIT exemplifies expertise and professionalism in every project they undertake. We've entrusted them with several complex IT projects, and they have consistently delivered outstanding results on time and within budget."
               avatar="/avatar-4@2x.png"
               sONALMADAN="Bhumika Shaldar"
               cAAspirant="CA Aspirant"
@@ -174,15 +166,11 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
               propMinWidth1="3.5rem"
             />
           </div>
-          <div className={styles.fourthTestimonial}>
-            <div className={styles.testimonial2}>
+          <div  className={styles.fourthTestimonial}>
+            <div data-aos="fade-up" className={styles.testimonial2}>
               <div className={styles.info1} />
               <div className={styles.anandAcademyIs}>
-                Anand Academy is the best coaching institute for BANKING and
-                SSC. The institute has best knowledgeable teaching faculty.
-                Computer lab and library 24×7 which is very useful for
-                aspirants. and the academy also conduct regular test series of
-                class and mock test.
+              The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
               </div>
               <div className={styles.userContainer1}>
                 <div className={styles.user1}>
@@ -190,7 +178,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                     <img
                       className={styles.avatarIcon2}
                       alt=""
-                      src="/avatar-5@2x.png"
+                      src="/Avatar3.png"
                     />
                     <div className={styles.userName1}>
                       <div className={styles.vijiyaViji}>Vijiya Viji</div>
@@ -219,25 +207,13 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </div>
               </div>
             </div>
-            <div className={styles.testimonial3}>
+            <div data-aos="fade-up" className={styles.testimonial3}>
               <div className={styles.testimonialContent}>
                 <div className={styles.iAttendedAContainer}>
                   <p className={styles.iAttendedA}>
-                    I attended a chartered accountancy coaching class at Anand
-                    Academy for foundation, and I found it to be an excellent
-                    learning experience. The Acedamy is well-equipped with
-                    modern facilities, including spacious classrooms,
-                    comfortable seating arrangements, and the latest teaching
-                    technology.
+                  From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
                   </p>
-                  <p className={styles.iWouldHighly}>
-                    I would highly recommend Anand Academy to anyone looking for
-                    quality chartered accountancy coaching. The fees were
-                    reasonable, and I feel like I received excellent value for
-                    my investment. I am confident that the skills and knowledge
-                    I gained during my time at the institute will help me
-                    achieve my career goals.
-                  </p>
+                 
                 </div>
                 <div className={styles.info2} />
               </div>

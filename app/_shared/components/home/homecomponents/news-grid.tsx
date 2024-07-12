@@ -49,13 +49,23 @@ const NewsGrid: NextPage<NewsGridType> = ({ className = "" }) => {
           digitalPlatform="Digital Platform"
         />
       </div>
-      <div className={styles.newsCard2}>
-        <Image1 image="/image-2@2x.png" />
+      <div className={styles.newsCard1}>
+        <div className={styles.image}>
+          <div className={styles.background} />
+          <img className={styles.imageIcon} alt="" src="/image-2@2x.png" />
+          <div className={styles.tag}>
+            <div className={styles.analyze}>Analyze</div>
+          </div>
+          <div className={`${styles.tag} ms-3`}>
+            <div className={styles.analyze}>Marketing</div>
+          </div>
+        </div>
         <CardContent
-          newDeviceInventionFor="Business Strategy Make "
-          digitalPlatform="His Goal Acheive"
+          newDeviceInventionFor="New Device Invention for "
+          digitalPlatform="Digital Platform"
         />
       </div>
+     
     </div>
   );
 };

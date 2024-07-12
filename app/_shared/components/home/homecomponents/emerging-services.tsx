@@ -2,7 +2,9 @@
 import type { NextPage } from "next";
 import GroupComponent from "./group-component";
 import styles from "./emerging-services.module.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export type EmergingServicesType = {
   className?: string;
 };
@@ -10,6 +12,9 @@ export type EmergingServicesType = {
 const EmergingServices: NextPage<EmergingServicesType> = ({
   className = "",
 }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <section className={[styles.emergingServices, className].join(" ")}>
       <div className={styles.emergingServicesContent}>
@@ -34,7 +39,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
             scalableBusinessCentricSo="Scalable, Business-Centric solutions, enabling you to spearhead innovation, bolster agility, and optimize operational costs."
           />
 
-          <div className={styles.rectangleGroup}>
+          <div data-aos="flip-left" className={styles.rectangleGroup}>
             <img
               className={styles.ellipseIcon}
               alt=""
@@ -53,7 +58,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               </div>
             </div>
           </div>
-          <div className={styles.rectangleGroup}>
+          <div data-aos="flip-left" className={styles.rectangleGroup}>
             <img
               className={styles.ellipseIcon}
               alt=""
@@ -72,7 +77,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               </div>
             </div>
           </div>
-          <div className={styles.rectangleGroup}>
+          <div data-aos="flip-left" className={styles.rectangleGroup}>
             <img
               className={styles.ellipseIcon}
               alt=""
@@ -90,7 +95,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               </div>
             </div>
           </div>
-          <div className={styles.rectangleGroup}>
+          <div data-aos="flip-left" className={styles.rectangleGroup}>
             <img
               className={styles.ellipseIcon}
               alt=""
@@ -108,7 +113,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               </div>
             </div>
           </div>
-          <div className={styles.rectangleGroup}>
+          <div data-aos="flip-left" className={styles.rectangleGroup}>
             <img
               className={styles.ellipseIcon}
               alt=""
@@ -126,42 +131,6 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               </div>
             </div>
           </div>
-          {/* <GroupComponent
-            ellipse271="/ellipse-271-3.svg"
-            cloudService="Cybersecurity"
-            scalableBusinessCentricSo=""
-          propBorder="0.8px solid var(--color-gainsboro-200)"
-          propPadding="var(--padding-2xl) var(--padding-xl) var(--padding-15xl) var(--padding-2xl)"
-          propBoxShadow="unset"
-          propBorder1="0.8px solid var(--color-gainsboro-200)"
-          propBoxShadow1="unset"
-          propGap="48.2px"
-          propGap1="23.8px"
-          /> */}
-          {/* <GroupComponent
-            ellipse271="/ellipse-271-4.svg"
-            cloudService={`AI & ML`}
-            scalableBusinessCentricSo=""
-          propBorder="unset"
-          propPadding="var(--padding-3xl-7) var(--padding-2xl) var(--padding-16xl-6) var(--padding-3xl)"
-          propBoxShadow="0px 43.3px 97.35px -32.45px rgba(24, 39, 75, 0.12), 0px 64.9px 227.14px -21.63px rgba(24, 39, 75, 0.12)"
-          propBorder1="unset"
-          propBoxShadow1="0px 43.3px 97.35px -32.45px rgba(24, 39, 75, 0.12), 0px 64.9px 227.14px -21.63px rgba(24, 39, 75, 0.12)"
-          propGap="41.2px"
-          propGap1="9.8px"
-          />
-          <GroupComponent
-            ellipse271="/ellipse-271-5.svg"
-            cloudService="Hyper Automation"
-            scalableBusinessCentricSo=""
-          propBorder="0.8px solid var(--color-gainsboro-200)"
-          propPadding="var(--padding-2xl) var(--padding-xl) var(--padding-15xl) var(--padding-2xl)"
-          propBoxShadow="unset"
-          propBorder1="0.8px solid var(--color-gainsboro-200)"
-          propBoxShadow1="unset"
-          propGap="41.2px"
-          propGap1="9.8px"
-          /> */}
         </div>
       </div>
     </section>

@@ -13,6 +13,17 @@
   padding: var(--padding-2xs-4) 0 0;
   box-sizing: border-box;
 }
+.horizantalBorder{
+  border: none;
+  height: 1rem;
+  width: 60px;
+  border-bottom: 3.8px solid #F05306;
+  margin-bottom: 40px;
+}
+.flexheding{
+  display: flex;
+  gap: 16px;
+}
 .whyChooseUs {
   height: 1.438rem;
   position: relative;
@@ -74,6 +85,9 @@
   display: inline-block;
   max-width: 100%;
   z-index: 4;
+  font-family: "Geologica", Helvetica;
+  color: #555555;
+  font-weight: 300;
 }
 .headingBackground1 {
   align-self: stretch;
