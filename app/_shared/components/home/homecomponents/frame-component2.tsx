@@ -154,16 +154,12 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
           </div>
         </div>
         <div className={styles.sectionLogos}>
-          {logos.map((p, i) => {
-            return (
-              <img
-                className={styles.sectionmaskGroupIcon}
-                loading="lazy"
-                alt=""
-                src={p.src}
-              />
-            )
-          })}
+          <img
+            className={styles.sectionmaskGroupIcon}
+            loading="lazy"
+            alt=""
+            src="/logoicons.png"
+          />
         </div>
       </div>
     </CarouselItem>
@@ -178,20 +174,16 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
             <BannerSlider data={dataSlider} />
           </div>
           <div className={`${styles.positionLogos} w-75 d-flex justify-content-center m-auto`}>
-          <div className={styles.sectionLogos}>
-            {logos.map((p, i) => {
-              return (
-                <img
-                  className={styles.sectionmaskGroupIcon}
-                  loading="lazy"
-                  alt=""
-                  src={p.src}
-                />
-              )
-            })}
+            <div className={styles.sectionLogos}>
+              <img
+                className={styles.sectionmaskGroupIcon}
+                loading="lazy"
+                alt=""
+                src="/logoicons.png"
+              />
+            </div>
           </div>
-          </div>
-          
+
         </div>
       </section>
     </>

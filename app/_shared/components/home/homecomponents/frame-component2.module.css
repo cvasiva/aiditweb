@@ -1,20 +1,41 @@
-.mobileExperienceBackground {
+/* .mobileExperienceBackground {
   width: 100%;
   height: 100%;
   position: absolute;
   margin: 0 !important;
-  /* top: 14px; */
+  top: 14px;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 12rem;
   backdrop-filter: blur(4px);
-  /* background-color: var(--color-burlywood); */
+  background-color: var(--color-burlywood);
   box-sizing: border-box;
   z-index: 3;
   border: 1.2px solid;
   border-image: conic-gradient(var(--color-darkorange), var(--color-darkorange), transparent, transparent, transparent, var(--color-darkorange), var(--color-darkorange)) 1;
+  border-radius: 10px;
+} */
+
+.mobileExperienceBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12rem;
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  z-index: 3;
+  border: 1.5px solid #f05306;
+  /* border-image: conic-gradient(var(--color-darkorange), var(--color-darkorange), transparent, transparent, transparent, var(--color-darkorange), var(--color-darkorange)) 1; */
+  border-radius: 10px; /* Added border-radius property */
+  overflow: hidden; /* Ensures child elements respect the border radius */
 }
+
+
 
 .homepageBannerIcon {
   width: 100%;
@@ -287,13 +308,12 @@ gap: 40px;
 }
 .sectionmaskGroupIcon {
   
-  width: 25%;
-  aspect-ratio: 3/2;
+  width: 100%;
   object-fit: contain;
   position: relative;
-  max-width: 78.747rem;
+  /* max-width: 78.747rem; */
   overflow: hidden;
-  max-height: 3.15rem;
+  /* max-height: 3.15rem; */
   z-index: 3;
 }
 .sliderPosition{
