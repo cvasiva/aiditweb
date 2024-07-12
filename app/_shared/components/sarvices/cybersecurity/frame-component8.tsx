@@ -11,7 +11,7 @@ const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
   return (
     <>
     <section className={[styles.frameParent, className].join(" ")}>
-      <Image src={cardbg1} alt="altText" className={styles.homepageBannerIcon} />
+      <Image src={cardbg1} alt="altText" className={styles.homepageBannerIcon} width={500} height={300} />
       <div className={styles.mobileExperienceWrapper}>
         <div className={styles.mobileExperience}>
           <div className={styles.mobileExperienceBackground} />

@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-key */
 "use client";
 import type { NextPage } from "next";
 import styles from "./frame-component2.module.css";
