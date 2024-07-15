@@ -48,6 +48,8 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </h1>
               </div>
             </div>
+           
+           
             <div className={styles.testimonialList}>
               <div className={styles.spancDbpoic}>
                 <div className={styles.testimonials}>Testimonials</div>
