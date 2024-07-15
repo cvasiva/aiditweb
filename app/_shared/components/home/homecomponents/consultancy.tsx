@@ -23,10 +23,9 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                         <span
                           className={styles.strategicItConsultancyContainer1}
                         >
-                          <p className={styles.strategicItConsultancy}>
-                            Strategic IT Consultancy with
+                          <p className={`${styles.strategicItConsultancy} mt-3`}>
+                            Strategic IT Consultancy with AI expertise
                           </p>
-                          <p className={styles.aiExpertise}>AI expertise</p>
                         </span>
                       </h1>
                       <div className={styles.artificialIntelligenceFor}>
@@ -101,7 +100,6 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
           <div className={styles.valueBenefits}>
             
             <div className={styles.div}>
-              {/* <div className={styles.child} /> */}
               <div className={styles.vectorContainer}>
                 <img
                   className={styles.vectorIcon2}

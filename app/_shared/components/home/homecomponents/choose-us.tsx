@@ -19,7 +19,7 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
               </div>
             </div>
             <div className={styles.headingBackground} />
-            <div className={styles.industryHeading}>
+            <div className={`${styles.industryHeading}`}>
               <h1 className={styles.howAiditIs}>
               <b>AIDIT</b> is leading the Technology Industry
               </h1>
@@ -34,7 +34,7 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
               commitment to compliance set new benchmarks for success and
               customer trust.
             </div>
-            <div className={styles.headingBackground1} />
+            {/* <div className={styles.headingBackground1} /> */}
           </div>
         </div>
         <div className={styles.customerFocus}>
@@ -64,9 +64,9 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
                     alt=""
                     src="/note.svg"
                   />
-                  <h2 className={styles.commitmentToCompliance}>
+                  <h3 className={styles.commitmentToCompliance}>
                     Commitment to Compliance and Standards
-                  </h2>
+                  </h3>
                 </div>
                 <div className={styles.aiditEnsuresAll}>
                   Aidit ensures all their solutions with industry standards and

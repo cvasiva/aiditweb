@@ -11,7 +11,7 @@ export type NewsGridType = {
 const NewsGrid: NextPage<NewsGridType> = ({ className = "" }) => {
   return (
     <div className={[styles.newsGrid, className].join(" ")}>
-      <div className={styles.newsCard}>
+      <div className={`${styles.newsCard} shadow-sm`}>
         <Image1 image="/image@2x.png" />
         <div className={styles.cardContent}>
           <div className={styles.contentHeader}>

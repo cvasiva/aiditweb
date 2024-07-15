@@ -872,4 +872,9 @@
     padding-right: var(--padding-xl);
     box-sizing: border-box;
   }
+ 
+  .peopleTech {
+    display: none;
+  }
 }
+

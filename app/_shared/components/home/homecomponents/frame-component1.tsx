@@ -31,7 +31,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <div className={styles.healthIcon} />
                 <h3 className={styles.cloudServices}>Cloud Services</h3>
                 <div className={styles.groupIcon}>
-                  <div>View Details</div>
+                  <div className="text-nowrap">View Details</div>
                   <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
                 </div>
                 <div className={styles.hovreffect}></div>
@@ -41,7 +41,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <div className={styles.healthIcon} />
                 <h3 className={styles.cloudServices}>Infrastructure Solution</h3>
                 <div className={styles.groupIcon}>
-                  <div>View Details</div>
+                  <div className="text-nowrap">View Details</div>
                   <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
                 </div>
                 <div className={styles.hovreffect}></div>
@@ -51,7 +51,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <div className={styles.healthIcon} />
                 <h3 className={styles.cloudServices}>Cybersecurity Offerings</h3>
                 <div className={styles.groupIcon}>
-                  <div>View Details</div>
+                  <div className="text-nowrap">View Details</div>
                   <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
                 </div>
                 <div className={styles.hovreffect}></div>
@@ -108,7 +108,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
 
                 </div>
               </div>
-              <div className={styles.divcPjlv3} />
+              {/* <div className={styles.divcPjlv3} /> */}
               <div className={styles.learnMoreIT}>
                 <div className={styles.learnMoreContainer}>
                   <img

@@ -13,6 +13,7 @@
 .aiExpertise,
 .strategicItConsultancy {
   margin: 0;
+  width: 90%;
 }
 
 .strategicItConsultancyContainer1 {
@@ -458,6 +459,7 @@
 }
 
 .div {
+  
   width: 18.4rem;
   border-radius: 69.47px;
   background-color: var(--color-gray-400);
@@ -715,6 +717,7 @@
 
   .div {
     flex-wrap: wrap;
+    margin: auto;
   }
 
   .intelligentDecisionMaking1 {

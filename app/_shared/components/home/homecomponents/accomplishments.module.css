@@ -41,7 +41,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 0 var(--padding-31xl) 0 var(--padding-32xl);
+  /* padding: 0 var(--padding-31xl) 0 var(--padding-32xl); */
   font-size: var(--font-size-lg-8);
   font-family: var(--font-raleway);
 }
@@ -69,13 +69,18 @@
   box-sizing: border-box;
 }
 .empty {
-  flex: 1;
+  /* flex: 1; */
+  justify-content: center;
   position: relative;
   line-height: 3.25rem;
   background: linear-gradient(97.28deg, #ff8e37, #f05306),
     linear-gradient(90deg, #2c18e5, #5442f4 46.88%, #5442f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.colEndBorder{
+  border: 0 5px solid #504f4f 0 0;
+
 }
 .emptyWrapper {
   align-self: stretch;
@@ -304,6 +309,7 @@
   .years {
     line-height: 2.563rem;
   }
+  
   .b,
   .rateValue {
     font-size: var(--font-size-11xl);
@@ -321,8 +327,11 @@
   .empty,
   .rateValue,
   .years {
-    font-size: var(--font-size-9xl);
-    line-height: 1.938rem;
+    /* font-size: 1.5rem;
+    line-height: 1.938rem; */
+  }
+  .colEndBorder{
+    border: none;
   }
   .b,
   .rateValue {

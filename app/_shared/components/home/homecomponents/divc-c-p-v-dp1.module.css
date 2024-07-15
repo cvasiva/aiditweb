@@ -228,7 +228,7 @@
 .linksList1 {
   display: flex;
   flex-direction: column;
-  padding-left: 2%;
+  padding-left: 3%;
   /* align-items: center;
   justify-content: center; */
 }
@@ -240,7 +240,7 @@
 }
 .linkServicesGroup {
   position: relative;
-  padding: 0 1.3rem;
+  /* padding: 0 1.3rem; */
   top: 0;
   /* left: 18.913rem; */
   width: 14.244rem;
@@ -465,4 +465,24 @@
     font-size: var(--font-size-lgi);
     line-height: 1.063rem;
   }
+  .horizantelLine{
+    border: none;
+    height: 2px;
+    width: 20rem;
+    border-bottom: 1.5px solid rgb(122, 119, 119);
+  }
+  .textHide{
+    visibility: hidden;
+  }
+  .linkServicesGroup {
+    /* position: relative; */
+    padding: 0 ;
+    top: 0;
+    /* left: 18.913rem; */
+    /* width: 14.244rem; */
+    /* gap: var(--gap-35xl-6); */
+  }
+}
+.textHide{
+  display: none;
 }
