@@ -1,16 +1,16 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/jsx-key */
 "use client";
 import type { NextPage } from "next";
 import styles from "./frame-component2.module.css";
-import dataSlider from './slider.json'
 export type FrameComponent2Type = {
   className?: string;
 };
-import BannerSlider from './BannerSlider'
 import {
+  Carousel,
   CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
 } from 'reactstrap';
 import { useState } from "react";
 interface Item {
@@ -19,9 +19,6 @@ interface Item {
   altText1: string;
   caption: string;
   key: number;
-}
-interface LogoItems {
-  src: string;
 }
 const items: Item[] = [
   {
@@ -32,7 +29,7 @@ const items: Item[] = [
     key: 1,
   },
   {
-    src: '/cardbg1.png',
+    src: './AditBannerBg.png',
     altText: 'Protect Business',
     altText1: 'with Cybersecurity & Compliance',
     caption: 'Shield your organization from cyber threats and ensure compliance with our expert solutions. Stay ahead of evolving threats and regulations with our experienced team.',
@@ -60,29 +57,6 @@ const items: Item[] = [
     key: 5,
   },
 ];
-const logos: LogoItems[] = [
-  {
-    src: '/oracle.png',
-  },
-  {
-    src: '/hdfc_ergo.png',
-  },
-  {
-    src: '/ibm.png',
-  },
-  {
-    src: '/Kyndryl_logo.png',
-  },
-  {
-    src: '/indigrid.png',
-  },
-  {
-    src: '/tata.png',
-  },
-  {
-    src: '/policy_bazaar.png',
-  },
-];
 interface ExampleProps {
   args?: any;
 }
@@ -108,58 +82,59 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
       key={item.src}
-      style={{ width: "100%" }}
+      style={{ width: "100%",height:'100vh' }}
     >
       <img key={item.key}
         src={item.src} alt={item.altText} className={styles.homepageBannerIcon} />
-      <div className="rounded rounded-4">
-        <div className={styles.mobileExperienceWrapper}>
-          <div className={styles.mobileExperience} >
-            <div className={styles.mobileExperienceBackground} />
-            <div className={styles.seamlessExperienceParent}>
-              <div className={styles.seamlessExperience}>
-                <h1 className={styles.deliverSeamlessMobileContainer}>
-                  <p className={styles.deliverSeamlessMobileWebEx}>
-                    <b>{item.altText}</b>
-                  </p>
-                  <p className={styles.withOurApplication}>
-                    {item.altText1}
-                  </p>
-                </h1>
-              </div>
-              <div className={styles.titleAndDescription} />
+      <div className={styles.mobileExperienceWrapper}>
+        <div className={styles.mobileExperience}>
+          <div className={styles.mobileExperienceBackground} />
+          <div className={styles.seamlessExperienceParent}>
+            <div className={styles.seamlessExperience}>
+              <div className={styles.seamlessBackground} />
+              <h1 className={styles.deliverSeamlessMobileContainer}>
+                <p className={styles.deliverSeamlessMobileWebEx}>
+                  <b>{item.altText}</b>
+                </p>
+                <p className={styles.withOurApplication}>
+                  {item.altText1}
+                </p>
+              </h1>
             </div>
-            <div className={styles.reachCustomers}>
-              <div className={styles.customerExperience}>
-                <div className={styles.reachMoreCustomers}>
-                  {item.caption}
-                </div>
-                <div className={styles.knowMoreButton}>
-                  <div className={styles.knowMoreContainer}>
-                    <div className={styles.knowMore}>Know More</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.titleAndDescription1} />
-            <div className={styles.titleAndDescription2} />
+            <div className={styles.titleAndDescription} />
           </div>
+          <div className={styles.reachCustomers}>
+            <div className={styles.customerExperience}>
+              <div className={styles.reachMoreCustomers}>
+                {item.caption}
+              </div>
+              <div className={styles.knowMoreButton}>
+                <div className={styles.knowMoreContainer}>
+                  <div className={styles.knowMore}>Know More</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.titleAndDescription1} />
+          <div className={styles.titleAndDescription2} />
         </div>
       </div>
       <div className={styles.serviceSuccess}>
         <div className={styles.serviceSuccessChild} />
-        <div className={styles.servicesForTheSuccessOfBrWrapper}>
+        {/* <div className={`${styles.servicesForTheSuccessOfBrWrapper} mb-5`}>
           <div className={styles.servicesForThe}>
             Services for the success of brilliant companies
           </div>
-        </div>
-        <div className={styles.sectionLogos}>
-          <img
-            className={styles.sectionmaskGroupIcon}
-            loading="lazy"
-            alt=""
-            src="/logoicons.png"
-          />
+        </div> */}
+        <div className={`${styles.positionLogos} mb-5 w-75 d-flex justify-content-center m-auto`}>
+          <div className={styles.sectionLogos}>
+            <img
+              className={styles.sectionmaskGroupIcon}
+              loading="lazy"
+              alt=""
+              src="/logoicons.png"
+            />
+          </div>
         </div>
       </div>
     </CarouselItem>
@@ -167,24 +142,12 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
   return (
     <>
       <section className={[styles.frameParent, className].join(" ")}>
-
-        <div className="position-relative w-100">
-          <img src="./AditBannerBg.png" className={styles.sliderBg} />
-          <div className={styles.positionBanner}>
-            <BannerSlider data={dataSlider} />
-          </div>
-          <div className={`${styles.positionLogos} w-75 d-flex justify-content-center m-auto`}>
-            <div className={styles.sectionLogos}>
-              <img
-                className={styles.sectionmaskGroupIcon}
-                loading="lazy"
-                alt=""
-                src="/logoicons.png"
-              />
-            </div>
-          </div>
-
-        </div>
+        <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+          {slides}
+          <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+          <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+        </Carousel>
       </section>
     </>
   );

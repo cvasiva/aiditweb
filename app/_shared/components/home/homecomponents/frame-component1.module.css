@@ -1249,7 +1249,9 @@
   .growthBackgroundIcon {
     height: 100%;
   }
-
+  .sectionLinkHealthInsura {
+   height: 10rem;
+  }
   .securedGrowth {
     display: none;
     align-items: flex-start;
