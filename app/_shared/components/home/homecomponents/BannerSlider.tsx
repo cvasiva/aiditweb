@@ -21,13 +21,14 @@ interface ButtonProps {
 }
 interface DemoSliderProps {
     data: Slide[];
+    size: { width: number | undefined; height: number | undefined };
 }
-const BannerSlider: React.FC<DemoSliderProps> = ({ data }) => {
+const BannerSlider: React.FC<DemoSliderProps> = ({ data, size }) => {
     return (
         <div className="d-flex justify-content-center w-100">
-            <div className="w-75">
+            <div className="w-100">
                 <div className=" h-screen">
-                    <ul className="h-full w-100">
+                    <ul className="h-full w-100 p-0">
                         <Swiper
                             navigation
                             pagination={{ type: "bullets", clickable: true }}
@@ -37,7 +38,6 @@ const BannerSlider: React.FC<DemoSliderProps> = ({ data }) => {
                         >
                             {data.map(({ id, image, tagline, title, buttons }) => (
                                 <SwiperSlide key={id}>
-
                                     <div className={`${styles.mobileExperienceWrapper} shadow-lg rounded rounded-4`}>
                                         <div className={styles.mobileExperience} >
                                             <div className={styles.mobileExperienceBackground} />
@@ -56,10 +56,6 @@ const BannerSlider: React.FC<DemoSliderProps> = ({ data }) => {
                                             </div>
                                             <div className={styles.reachCustomers}>
                                                 <div className={styles.customerExperience}>
-                                                    <div className={styles.reachMoreCustomers}>
-                                                        Build custom mobile & web applications that are responsive, scalable, and
-                                                        user business centric design.
-                                                    </div>
                                                     <div className={styles.knowMoreButton}>
                                                         <div className={styles.knowMoreContainer}>
                                                             <div className={styles.knowMore}>Know More</div>

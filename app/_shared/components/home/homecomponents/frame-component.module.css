@@ -478,6 +478,7 @@
   display: none;
 }
 .anandAcademyIs {
+  font-size: 1rem;
   align-self: stretch;
   position: relative;
   line-height: 1.291rem;
@@ -498,6 +499,7 @@
   font-weight: 500;
   display: inline-block;
   min-width: 3.5rem;
+  font-size: 1rem;
 }
 .caAspirant2 {
   font-size: var(--font-size-3xs);
@@ -599,6 +601,9 @@
   gap: var(--gap-6xl);
   z-index: 1;
 }
+.iAttendedA{
+  font-size: 1rem;
+}
 .iAttendedA,
 .iWouldHighly {
   margin: 0;
@@ -628,6 +633,9 @@
   object-fit: contain;
   flex-shrink: 0;
   
+}
+.bhumikaShaldar{
+  font-size: 1rem;
 }
 .bhumikaShaldar,
 .caAspirant3 {

@@ -2,10 +2,17 @@
 import type { NextPage } from "next";
 import styles from "./frame-component1.module.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { useEffect, useState } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 export type FrameComponent1Type = {
   className?: string;
 };
 const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
+  const size = useWindowSize()
   return (
     <section className={[styles.homeInner, className].join(" ")}>
       <div className={styles.productsBenefitsParent}>
@@ -24,110 +31,122 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
               </h1>
             </div>
           </div>
-          <div className={styles.healthServices}>
-            <div className={styles.healthServiceLinks}>
-              <div className={styles.sectionLinkHealthInsura}>
-                <div className={styles.divcPjlv} />
-                <div className={styles.healthIcon} />
-                <h3 className={styles.cloudServices}>Cloud Services</h3>
-                <div className={styles.groupIcon}>
-                  <div className="text-nowrap">View Details</div>
-                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
-                </div>
-                <div className={styles.hovreffect}></div>
-              </div>
-              <div className={styles.sectionLinkHealthInsura12}>
-                <div className={styles.divcPjlv} />
-                <div className={styles.healthIcon} />
-                <h3 className={styles.cloudServices}>Infrastructure Solution</h3>
-                <div className={styles.groupIcon}>
-                  <div className="text-nowrap">View Details</div>
-                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
-                </div>
-                <div className={styles.hovreffect}></div>
-              </div>
-              <div className={styles.sectionLinkHealthInsura22}>
-                <div className={styles.divcPjlv} />
-                <div className={styles.healthIcon} />
-                <h3 className={styles.cloudServices}>Cybersecurity Offerings</h3>
-                <div className={styles.groupIcon}>
-                  <div className="text-nowrap">View Details</div>
-                  <div style={{marginTop:'-0.2rem'}}><IoIosArrowForward className="fw-bold " /></div>
-                </div>
-                <div className={styles.hovreffect}></div>
-              </div>
-              {/* <div className={styles.sectionLinkWorkplacePen}>
-                <img
-                  className={styles.freepikExport20240514221652yIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/freepikexport20240514221652yqgt-1@2x.png"
-                />
-                 <div className={styles.divcPjlvGroup}>
-                  <div className={styles.divcPjlv2} />
-                  <div className={styles.pcGvnpxb1} />
-                  <div className={styles.frameChild} />
-                  <h3 className={styles.infrastructureSolution}>Infrastructure Solution</h3>
+          {size.width > 700 ?
+            <div className={styles.healthServices}>
+              <div className={styles.healthServiceLinks}>
+                <div className={styles.sectionLinkHealthInsura}>
+                  <div className={styles.divcPjlv} />
+                  <div className={styles.healthIcon} />
+                  <h3 className={styles.cloudServices}>Cloud Services</h3>
                   <div className={styles.groupIcon}>
-                    <div>View Details</div>
-                    <div><IoIosArrowForward className="fw-bold" fontSize={20} /></div>
+                    <div className="text-nowrap">View Details</div>
+                    <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
+                  </div>
+                  <div className={styles.hovreffect}></div>
+                </div>
+                <div className={styles.sectionLinkHealthInsura12}>
+                  <div className={styles.divcPjlv} />
+                  <div className={styles.healthIcon} />
+                  <h3 className={styles.cloudServices}>Infrastructure Solution</h3>
+                  <div className={styles.groupIcon}>
+                    <div className="text-nowrap">View Details</div>
+                    <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
+                  </div>
+                  <div className={styles.hovreffect}></div>
+                </div>
+                <div className={styles.sectionLinkHealthInsura22}>
+                  <div className={styles.divcPjlv} />
+                  <div className={styles.healthIcon} />
+                  <h3 className={styles.cloudServices}>Cybersecurity Offerings</h3>
+                  <div className={styles.groupIcon}>
+                    <div className="text-nowrap">View Details</div>
+                    <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
                   </div>
                   <div className={styles.hovreffect}></div>
                 </div>
               </div>
-              <div className={styles.sectionLinkLifeInsuranc}>
-                <img
-                  className={styles.image104296Icon}
-                  alt=""
-                  src="/image-104296@2x.png"
-                />
-                <div className={styles.divcPjlvGroup}>
-                  <div className={styles.divcPjlv2} />
-                  <div className={styles.pcGvnpxb1} />
-                  <div className={styles.frameChild} />
-                  <h3 className={styles.infrastructureSolution}>Cybersecurity Offerings</h3>
-                  <div className={styles.groupIcon2}>
-                    <div>View Details</div>
-                    <div><IoIosArrowForward className="fw-bold " /></div>
+              <div className={styles.section1}>
+                <div className={styles.pcGvnpxb2} />
+                <div className={styles.consultingDescription}>
+                  <h1
+                    className={styles.itStrategy}
+                  >{`IT Strategy & Consulting`}</h1>
+                  <div className={styles.formulationAndExecutionContainer}>
+                    <p className={styles.formulationAndExecution}>
+                      Formulation and execution of a technology roadmap that aligns
+                      with an organization's overall business objectives.
+                    </p>
                   </div>
-                  <div className={styles.hovreffect}></div>
                 </div>
-              </div> */}
-            </div>
-            <div className={styles.section1}>
-              <div className={styles.pcGvnpxb2} />
-              <div className={styles.consultingDescription}>
-                <h1
-                  className={styles.itStrategy}
-                >{`IT Strategy & Consulting`}</h1>
-                <div className={styles.formulationAndExecutionContainer}>
-                  <p className={styles.formulationAndExecution}>
-                    Formulation and execution of a technology roadmap that aligns
-                    with an organization's overall business objectives.
-                  </p>
-
-                </div>
-              </div>
-              {/* <div className={styles.divcPjlv3} /> */}
-              <div className={styles.learnMoreIT}>
-                <div className={styles.learnMoreContainer}>
-                  <img
-                    className={styles.learnMoreContainerChild}
-                    alt=""
-                    src="/rectangle-34628414@2x.png"
-                  />
-                  <a className={styles.learnMore}>LEARN MORE</a>
-                  <div className={styles.learnMoreITIcon}>
+                <div className={styles.learnMoreIT}>
+                  <div className={styles.learnMoreContainer}>
                     <img
-                      className={styles.vectorIcon}
+                      className={styles.learnMoreContainerChild}
                       alt=""
-                      src="/vector.svg"
+                      src="/rectangle-34628414@2x.png"
                     />
+                    <a className={styles.learnMore}>LEARN MORE</a>
+                    <div className={styles.learnMoreITIcon}>
+                      <img
+                        className={styles.vectorIcon}
+                        alt=""
+                        src="/vector.svg"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> : 
+            <div className="w-100">
+              <div className=" h-screen">
+                <ul className="h-full w-100 p-0">
+                  <Swiper
+                    navigation
+                    pagination={{ type: "bullets", clickable: true }}
+                    autoplay={false}
+                    loop={false}
+                    modules={[Autoplay, Navigation, Pagination]}
+                  >
+                    <SwiperSlide>
+                      <div className={styles.sectionLinkHealthInsura}>
+                        <div className={styles.divcPjlv} />
+                        <div className={styles.healthIcon} />
+                        <h3 className={`${styles.cloudServices} text-white`}>Cloud Services</h3>
+                        <div className={styles.groupIcon}>
+                          <div className="text-nowrap">View Details</div>
+                          <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
+                        </div>
+                        <div className={styles.hovreffect}></div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className={styles.sectionLinkHealthInsura12}>
+                        <div className={styles.divcPjlv} />
+                        <div className={styles.healthIcon} />
+                        <h3 className={`${styles.cloudServices} text-white`}>Infrastructure Solution</h3>
+                        <div className={styles.groupIcon}>
+                          <div className="text-nowrap">View Details</div>
+                          <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
+                        </div>
+                        <div className={styles.hovreffect}></div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className={styles.sectionLinkHealthInsura22}>
+                        <div className={styles.divcPjlv} />
+                        <div className={styles.healthIcon} />
+                        <h3 className={`${styles.cloudServices} text-white`}>Cybersecurity Offerings</h3>
+                        <div className={styles.groupIcon}>
+                          <div className="text-nowrap">View Details</div>
+                          <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
+                        </div>
+                        <div className={styles.hovreffect}></div>
+                      </div>
+                    </SwiperSlide>
+                  </Swiper>
+                </ul>
+              </div>
+            </div>}
         </div>
         <div className={styles.frameParent}>
           <div className={styles.growthBackgroundParent}>
@@ -179,7 +198,6 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                       Security, Strategy and Consulting paves the way for your
                       business to thrive in the digital era.
                     </div>
-                    {/* <img className={styles.vectorIcon2} alt="" /> */}
                   </div>
                 </div>
               </div>
@@ -202,3 +220,21 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   );
 };
 export default FrameComponent1;
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
