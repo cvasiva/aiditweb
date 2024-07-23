@@ -13,6 +13,7 @@ import {
 } from 'reactstrap';
 import { useEffect, useState } from "react";
 import BannerSlider from "./BannerSlider";
+
 interface Item {
   src: string;
   altText: string;
