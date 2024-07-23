@@ -267,7 +267,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
             </div> :
             <div className="w-100">
               <div className=" h-screen">
-                <ul className="h-full w-100 p-0">
+                <ul className="h-full w-100 p-0 shadow-0">
                   <Swiper
                     navigation
                     // pagination={{ type: "bullets", clickable: true }}
@@ -276,7 +276,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                     modules={[Autoplay, Navigation, Pagination]}
                   >
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100`}>
+                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -318,7 +318,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100`}>
+                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
                   <div className={styles.testimonialContent}>
                     <div className={styles.iAttendedAContainer}>
                       <p className={styles.iAttendedA}>
@@ -367,7 +367,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100`}>
+                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -409,7 +409,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100`}>
+                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
                   <div className={styles.testimonialContent}>
                     <div className={styles.iAttendedAContainer}>
                       <p className={styles.iAttendedA}>
@@ -458,7 +458,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100`}>
+                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -500,7 +500,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100`}>
+                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
                   <div className={styles.testimonialContent}>
                     <div className={styles.iAttendedAContainer}>
                       <p className={styles.iAttendedA}>
@@ -549,7 +549,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100`}>
+                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -591,7 +591,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100`}>
+                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
                   <div className={styles.testimonialContent}>
                     <div className={styles.iAttendedAContainer}>
                       <p className={styles.iAttendedA}>
@@ -640,7 +640,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                 </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100`}>
+                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -682,7 +682,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100`}>
+                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
                   <div className={styles.testimonialContent}>
                     <div className={styles.iAttendedAContainer}>
                       <p className={styles.iAttendedA}>
