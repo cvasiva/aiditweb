@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import type { NextPage } from "next";
 import styles from "./frame-component2.module.css";
+import dataSlider from './slider.json'
 export type FrameComponent2Type = {
   className?: string;
 };
@@ -10,9 +10,9 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
 } from 'reactstrap';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import BannerSlider from "./BannerSlider";
 interface Item {
   src: string;
   altText: string;
@@ -55,12 +55,13 @@ const items: Item[] = [
     altText1: 'Expert IT Strategy',
     caption: 'Shield your organization from cyber threats and ensure compliance with our expert solutions. Stay ahead of evolving threats and regulations with our experienced team.',
     key: 5,
-  },
+  }
 ];
 interface ExampleProps {
   args?: any;
 }
 const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, ExampleProps) => {
+  const size = useWindowSize()
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const next = () => {
@@ -82,7 +83,7 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
       key={item.src}
-      style={{ width: "100%",height:'100vh' }}
+      style={{ width: "100%", height: '100vh' }}
     >
       <img key={item.key}
         src={item.src} alt={item.altText} className={styles.homepageBannerIcon} />
@@ -105,9 +106,9 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
           </div>
           <div className={styles.reachCustomers}>
             <div className={styles.customerExperience}>
-              <div className={styles.reachMoreCustomers}>
+              {size.width > 700 ? <div className={styles.reachMoreCustomers}>
                 {item.caption}
-              </div>
+              </div> : ""}
               <div className={styles.knowMoreButton}>
                 <div className={styles.knowMoreContainer}>
                   <div className={styles.knowMore}>Know More</div>
@@ -121,35 +122,65 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
       </div>
       <div className={styles.serviceSuccess}>
         <div className={styles.serviceSuccessChild} />
-        {/* <div className={`${styles.servicesForTheSuccessOfBrWrapper} mb-5`}>
-          <div className={styles.servicesForThe}>
-            Services for the success of brilliant companies
-          </div>
-        </div> */}
-        <div className={`${styles.positionLogos} mb-5 w-75 d-flex justify-content-center m-auto`}>
-          <div className={styles.sectionLogos}>
-            <img
-              className={styles.sectionmaskGroupIcon}
-              loading="lazy"
-              alt=""
-              src="/logoicons.png"
-            />
-          </div>
-        </div>
+        <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+              <div className={styles.wrapper}>
+                <img src="./L1.png" className={ `${styles.itemLeft} ${styles.item1}`}/>
+                <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`}/>
+                <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`}/>
+                <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`}/>
+                <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`}/>
+                <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`}/>
+              </div>
+            </div>
       </div>
     </CarouselItem>
   ));
   return (
     <>
       <section className={[styles.frameParent, className].join(" ")}>
-        <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
-          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-          {slides}
-          <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-          <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
+        {size.width > 700 ?
+          <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+            {slides}
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+          </Carousel>
+          : <div className="position-relative w-100">
+            <img src="./AditBannerBg.png" className={styles.sliderBg} />
+            <div className={styles.positionBanner}>
+              <BannerSlider data={dataSlider} size={size} />
+            </div>
+            <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+              <div className={styles.wrapper}>
+                <img src="./L1.png" className={ `${styles.itemLeft} ${styles.item1}`}/>
+                <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`}/>
+                <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`}/>
+                <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`}/>
+                <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`}/>
+                <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`}/>
+              </div>
+            </div>
+          </div>}
       </section>
     </>
   );
 };
 export default FrameComponent2;
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); 
+  return windowSize;
+}
