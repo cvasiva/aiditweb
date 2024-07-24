@@ -6,7 +6,7 @@ import '../globals.css'
 import layoutStyles from "./layout.module.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
 export const metadata = {
-  title: 'Aidit',
+  title: 'AIDIT',
   description: '',
 }
 

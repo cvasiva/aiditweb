@@ -168,7 +168,7 @@
 .linksList {
   align-self: stretch;
   gap: var(--gap-4xl-2);
-  font-size: var(--font-size-mid-2);
+  font-size: 0.9rem;
   color: var(--color-gainsboro-100);
 }
 .linkServicesParent {
@@ -235,7 +235,7 @@
 .linksList1 {
   /* align-self: stretch; */
   gap: var(--gap-4xl-5);
-  font-size: var(--font-size-mid-2);
+  font-size: 0.9rem;
   color: var(--color-gainsboro-100);
 }
 .linkServicesGroup {
@@ -310,7 +310,7 @@
 }
 .socialLinks {
   gap: var(--gap-base-4);
-  font-size: var(--font-size-mid-2);
+  font-size: 0.9rem;
   color: var(--color-gainsboro-100);
 }
 .footerTitleParent {

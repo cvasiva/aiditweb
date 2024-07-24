@@ -1,12 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
+
+"use client"
 import type { NextPage } from "next";
 import styles from "./divc-c-p-v-dp1.module.css";
+import { useEffect, useState } from "react";
 
 export type DivcCPVDp1Type = {
   className?: string;
 };
 
 const DivcCPVDp1: NextPage<DivcCPVDp1Type> = ({ className = "" }) => {
+  const size = useWindowSize()
   return (
     <footer className={[styles.divcCpvdp, className].join(" ")}>
       <div className={styles.image} />
@@ -21,10 +24,11 @@ const DivcCPVDp1: NextPage<DivcCPVDp1Type> = ({ className = "" }) => {
             </div>
           </div>
         </div>
-        <div className={styles.ourUnflinchingMission}>
+        {size.width > 700 ?<div className={styles.ourUnflinchingMission}>
           Our unflinching mission is to combine extraordinary new technologies
           with human ingenuity to meet business challenges and drive growth.
-        </div>
+        </div> : ""}
+        
       </div>
       <div className={styles.footerDivider}>
         <img
@@ -100,3 +104,23 @@ const DivcCPVDp1: NextPage<DivcCPVDp1Type> = ({ className = "" }) => {
 };
 
 export default DivcCPVDp1;
+
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
