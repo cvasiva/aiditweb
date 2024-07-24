@@ -12,11 +12,13 @@ const Image1: NextPage<Image1Type> = ({ className = "", image }) => {
     <div className={[styles.image, className].join(" ")}>
       <div className={styles.background} />
       <img className={styles.imageIcon} loading="lazy" alt="" src={image} />
+      <div className="d-flex justify-center gap-2">
       <div className={styles.tag}>
-        <div className={styles.analyze}>UX writing</div>
+        <div className={`${styles.analyze} text-nowrap`}>UX writing</div>
       </div>
       <div className={styles.tag1}>
-        <a className={styles.marketing}>UX writing</a>
+        <a className={`${styles.marketing} text-nowrap`}>UX writing</a>
+      </div>
       </div>
     </div>
   );
