@@ -102,7 +102,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 <ul className="h-full w-100 p-0">
                   <Swiper
                     navigation
-                    pagination={{ type: "bullets", clickable: true }}
+                    // pagination={{ type: "bullets", clickable: true }}
                     autoplay={false}
                     loop={false}
                     modules={[Autoplay, Navigation, Pagination]}

@@ -4,23 +4,25 @@ import styles from "./accomplishments.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { Col, Row } from "reactstrap";
+import { useEffect, useState } from "react";
 export type AccomplishmentsType = {
   className?: string;
 };
 
 const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
+  const size = useWindowSize()
   return (
     <section className={[styles.accomplishments, className].join(" ")}>
       <div className={styles.accomplishmentsContent}>
         <div className={styles.accomplishmentsTitle}>
           <h1 className={styles.aiditsSignificantAccomplish}>
-            Aidit{"'"}s Significant Accomplishments
+            AIDIT{"'"}S Significant Accomplishments
           </h1>
         </div>
         <Row className="w-100 m-auto">
           <Col md={3} className={`${styles.colEndBorder} mt-4`} xs={6}>
             <div className='d-flex justify-content-center gap-0'>
-              <CountUp end={15} duration={0.6} redraw={true}>
+              <CountUp end={25} duration={0.6} redraw={true}>
                 {({ countUpRef, start }) => {
                   return <>
                     <VisibilitySensor onChange={start} delayedCall>
@@ -38,7 +40,7 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
 
           <Col md={3} className={`${styles.colEndBorder} mt-4`} xs={6}>
           <div className='d-flex justify-content-center gap-0'>
-              <CountUp end={20} duration={0.6} redraw={true}>
+              <CountUp end={50} duration={0.6} redraw={true}>
                 {({ countUpRef, start }) => {
                   return <>
                     <VisibilitySensor onChange={start} delayedCall>
@@ -47,10 +49,11 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
                   </>
                 }}
               </CountUp>
-              <h1 className={`${styles.empty} fw-bold`}>years</h1>
+              
             </div>
-            <div className={styles.industryLabel}>
-              <div className={`${styles.inIndustry} `}>Projects Completed</div>
+            
+            <div className={`${styles.industryLabel} mt-2`}>
+              <div className={`${styles.inIndustry} `}>Projects {size.width > 700 ? "Completed" : "done"} </div>
             </div>
           </Col>
           <Col md={3} className={`${styles.colEndBorder} mt-4`} xs={6}>
@@ -83,3 +86,22 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
 };
 
 export default Accomplishments;
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}

@@ -17,7 +17,7 @@ const Image1: NextPage<Image1Type> = ({ className = "", image }) => {
         <div className={`${styles.analyze} text-nowrap`}>UX writing</div>
       </div>
       <div className={styles.tag1}>
-        <a className={`${styles.marketing} text-nowrap`}>UX writing</a>
+        <a className={`${styles.marketing} text-nowrap`}>UI Design</a>
       </div>
       </div>
     </div>

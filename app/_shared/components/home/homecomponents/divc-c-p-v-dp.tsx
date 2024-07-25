@@ -18,7 +18,7 @@ const DivcCPVDp: NextPage<DivcCPVDpType> = ({ className = "" }) => {
         <div className={styles.copyright}>
           <div className={styles.rights}>
             <div className={styles.allCopyrightsReserved}>
-              All Copyrights reserved @Aidit
+              All Copyrights reserved @AIDIT
             </div>
           </div>
           <div className={styles.socialLinks}>

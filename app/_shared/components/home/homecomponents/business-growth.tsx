@@ -20,7 +20,7 @@ const BusinessGrowth: NextPage<BusinessGrowthType> = ({ className = "" }) => {
             </div>
             <div className={styles.elevateYourDigitalContainer}>
               <span>Elevate your <br/> digital business with</span>
-              <span className="fw-bold ms-3">Aidit</span>
+              <span className="fw-bold ms-3">AIDIT</span>
             </div>
           </div>
           <div className={styles.contactButton}>
