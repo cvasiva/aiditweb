@@ -2,13 +2,12 @@
 import type { NextPage } from "next";
 import styles from "./choose-us.module.css";
 import { useState } from "react";
-
 export type ChooseUsType = {
   className?: string;
 };
-
 const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
   const [hover, setHover] = useState(false);
+  const [tech, setTech] = useState(false);
   const [note, setNote] = useState(false);
   const [driven, setDriven] = useState(false);
   return (
@@ -44,30 +43,32 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
         <div className={styles.customerFocus}>
           <div className={styles.feedbackWrapper}>
             <div className={styles.feedback}>
-              <div className={styles.customerDev}>
-                <div className={styles.development}>
-                  <img
-                    className={styles.vectorIcon}
-                    alt=""
-                    src="/vector-9.svg"
-                  />
-                </div>
-                <h2 className={styles.pioneeringCuttingEdgeTechno}>
-                  Pioneering Cutting-Edge Technologies
-                </h2>
-                <div className={styles.aiditConsistentlyInvests}>
-                  AIDIT consistently invests in the latest technological
-                  advancements, ensuring they stay ahead of industry trends.
-                </div>
-              </div>
-              <div onMouseEnter={() => setNote(true)}
-              onMouseLeave={() => setNote(false)} className={styles.customerDev1}>
+              <div onMouseEnter={() => setTech(true)}
+                onMouseLeave={() => setTech(false)} className={styles.customerDev1}>
                 <div className={styles.noteParent}>
                   <img
                     className={styles.noteIcon}
                     loading="lazy"
                     alt=""
-                    src={note ?"/ll4.png" : "/note.svg" }
+                    src={tech ? "/vector-9.svg" : "/ll1.png"}
+                  />
+                  <h3 className={styles.commitmentToCompliance}>
+                    Pioneering Cutting-Edge Technologiess
+                  </h3>
+                </div>
+                <div className={styles.aiditEnsuresAll}>
+                  AIDIT consistently invests in the latest technological
+                  advancements, ensuring they stay ahead of industry trends.
+                </div>
+              </div>
+              <div onMouseEnter={() => setNote(true)}
+                onMouseLeave={() => setNote(false)} className={styles.customerDev1}>
+                <div className={styles.noteParent}>
+                  <img
+                    className={styles.noteIcon}
+                    loading="lazy"
+                    alt=""
+                    src={note ? "/ll4.png" : "/note.svg"}
                   />
                   <h3 className={styles.commitmentToCompliance}>
                     Commitment to Compliance and Standards
@@ -87,7 +88,7 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
                 className={styles.usersIcon}
                 loading="lazy"
                 alt=""
-                src={hover ?"/ll3.png" : "/users.svg" }
+                src={hover ? "/ll3.png" : "/users.svg"}
               />
               <h2 className={styles.customerCentricDevelopment}>
                 Customer-Centric Development.
@@ -100,7 +101,7 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
             <div onMouseEnter={() => setDriven(true)}
               onMouseLeave={() => setDriven(false)} className={styles.customerFeedback1}>
               <div className={styles.vectorParent}>
-                <img className={styles.targetIcon} alt="" src={driven ?"/ll2.png" : "/target.svg" }  />
+                <img className={styles.targetIcon} alt="" src={driven ? "/ll2.png" : "/target.svg"} />
               </div>
               <h2 className={styles.dataDrivenDecisionMaking}>
                 Data-Driven Decision Making
@@ -116,5 +117,4 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
     </section>
   );
 };
-
 export default ChooseUs;
