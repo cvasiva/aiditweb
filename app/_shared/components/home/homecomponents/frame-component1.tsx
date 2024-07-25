@@ -96,7 +96,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                   </div>
                 </div>
               </div>
-            </div> : 
+            </div> :
             <div className="w-100">
               <div className=" h-screen">
                 <ul className="h-full w-100 p-0">
@@ -108,39 +108,30 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                     modules={[Autoplay, Navigation, Pagination]}
                   >
                     <SwiperSlide>
-                      <div className={styles.sectionLinkHealthInsura}>
-                        <div className={styles.divcPjlv} />
-                        <div className={styles.healthIcon} />
-                        <h3 className={`${styles.cloudServices} text-white`}>Cloud Services</h3>
-                        <div className={styles.groupIcon}>
+                      <div className={styles.service3}>
+                        <h3 className={` text-white pt-4 text-start px-4 fs-4`}>Cloud Services</h3>
+                        <div className={`text-start pt-3 px-4  ${styles.groupIcon}`}>
                           <div className="text-nowrap">View Details</div>
                           <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
                         </div>
-                        <div className={styles.hovreffect}></div>
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={styles.sectionLinkHealthInsura12}>
-                        <div className={styles.divcPjlv} />
-                        <div className={styles.healthIcon} />
-                        <h3 className={`${styles.cloudServices} text-white`}>Infrastructure Solution</h3>
-                        <div className={styles.groupIcon}>
+                      <div className={styles.service1}>
+                        <h3 className={` text-white pt-4 text-start px-4 fs-4`}>Infrastructure Solution</h3>
+                        <div className={`text-start pt-3 px-4  ${styles.groupIcon}`}>
                           <div className="text-nowrap">View Details</div>
                           <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
                         </div>
-                        <div className={styles.hovreffect}></div>
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={styles.sectionLinkHealthInsura22}>
-                        <div className={styles.divcPjlv} />
-                        <div className={styles.healthIcon} />
-                        <h3 className={`${styles.cloudServices} text-white`}>Cybersecurity Offerings</h3>
-                        <div className={styles.groupIcon}>
+                      <div className={styles.service2}>
+                        <h3 className={` text-white pt-4 text-start px-4 fs-4`}>Cybersecurity Offerings</h3>
+                        <div className={`text-start pt-3 px-4  ${styles.groupIcon}`}>
                           <div className="text-nowrap">View Details</div>
                           <div style={{ marginTop: '-0.2rem' }}><IoIosArrowForward className="fw-bold " /></div>
                         </div>
-                        <div className={styles.hovreffect}></div>
                       </div>
                     </SwiperSlide>
                   </Swiper>

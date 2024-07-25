@@ -1244,7 +1244,34 @@
     gap: var(--gap-8xl);
   }
 }
-
+.service1{
+  background-image: url(/service_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+  border-radius: 18px;
+  margin: 0rem 1.3rem;
+}
+.service2{
+  background-image: url(/service_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+  border-radius: 18px;
+  margin: 0rem 1.3rem;
+}
+.service3{
+  background-image: url(/service_3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+  /* padding: var(--padding-32xl) var(--padding-xl) var(--padding-370xl) var(--padding-12xl); */
+  border-radius: 18px;
+  margin: 0rem 0.7rem;
+}
 @media screen and (max-width: 450px) {
   .growthBackgroundIcon {
     height: 100%;
