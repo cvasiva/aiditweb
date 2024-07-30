@@ -715,8 +715,10 @@
   .intelligentDecisionMaking {
     font-size: var(--font-size-lg);
     line-height: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
+    color: #ffff;
   }
+  
 
   .div {
     flex-wrap: wrap;
