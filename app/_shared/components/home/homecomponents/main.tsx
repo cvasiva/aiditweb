@@ -83,9 +83,9 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
               </nav>
             </nav>
             <div className={styles.resourceButtonWrapper}>
-              <button className={styles.resourceButton}>
+              <a href="https://wa.me/916303790179?text=Hello I am looking for support with website development, Graphic design, SEO, or lead generation services" target="_blank" rel="noopener noreferrer" className={`${styles.resourceButton} ${styles.itemButton5}`}>
                 <div className={styles.resourceButtonContainer}>
-                  <a className={styles.itemButton5}>Contact</a>
+                  <a  className={styles.itemButton5}>Contact</a>
                 </div>
                 <div className={styles.ellipseParent}>
                   <div className={styles.frameItem} />
@@ -96,7 +96,7 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
                     src="/group.svg"
                   />
                 </div>
-              </button>
+              </a>
             </div>
           </header>
         </div>
