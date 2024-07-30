@@ -16,7 +16,7 @@ const Accomplishments: NextPage<AccomplishmentsType> = ({ className = "" }) => {
       <div className={styles.accomplishmentsContent}>
         <div className={styles.accomplishmentsTitle}>
           <h1 className={styles.aiditsSignificantAccomplish}>
-            AIDIT{"'"}S Significant Accomplishments
+            AIDIT{"'"}s <br/> Significant Accomplishments
           </h1>
         </div>
         <Row className="w-100 m-auto">

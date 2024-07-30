@@ -4,7 +4,7 @@ import styles from "./frame-component.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -269,14 +269,18 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
               <div className=" h-screen">
                 <ul className="h-full w-100 p-0 shadow-0">
                   <Swiper
-                    navigation
-                    // pagination={{ type: "bullets", clickable: true }}
-                    autoplay={false}
-                    loop={false}
-                    modules={[Autoplay, Navigation, Pagination]}
+                    pagination={{
+                      dynamicBullets: true,
+                    }}
+                    modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
+                    autoplay={{
+                      "delay": 2500,
+                      "disableOnInteraction": false
+                    }}
+                    loop={true}
                   >
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
+                      <div className={`${styles.testimonial2} h-100 `}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -318,56 +322,56 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
-                  <div className={styles.testimonialContent}>
-                    <div className={styles.iAttendedAContainer}>
-                      <p className={styles.iAttendedA}>
-                        From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
-                      </p>
+                      <div className={`${styles.testimonial3} h-100 `}>
+                        <div className={styles.testimonialContent}>
+                          <div className={styles.iAttendedAContainer}>
+                            <p className={styles.iAttendedA}>
+                              From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
+                            </p>
 
-                    </div>
-                    <div className={styles.info2} />
-                  </div>
-                  <div className={styles.testimonialUser}>
-                    <div className={styles.userImageContainerWrapper}>
-                      <div className={styles.userImageContainer}>
-                        <img
-                          className={styles.avatarIcon3}
-                          alt=""
-                          src="/avatar-4@2x.png"
-                        />
-                        <div className={styles.userCredentials}>
-                          <div className={styles.bhumikaShaldar}>
-                            Bhumika Shaldar
                           </div>
-                          <div className={styles.caAspirant3}>CA Aspirant</div>
+                          <div className={styles.info2} />
+                        </div>
+                        <div className={styles.testimonialUser}>
+                          <div className={styles.userImageContainerWrapper}>
+                            <div className={styles.userImageContainer}>
+                              <img
+                                className={styles.avatarIcon3}
+                                alt=""
+                                src="/avatar-4@2x.png"
+                              />
+                              <div className={styles.userCredentials}>
+                                <div className={styles.bhumikaShaldar}>
+                                  Bhumika Shaldar
+                                </div>
+                                <div className={styles.caAspirant3}>CA Aspirant</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className={styles.platformLogoContainerParent}>
+                            <div className={styles.platformLogoContainer}>
+                              <img
+                                className={styles.googleLogo98081Icon3}
+                                alt=""
+                                src="/googlelogo9808-1@2x.png"
+                              />
+                            </div>
+                            <div className={styles.reviewSeparator}>
+                              <div className={styles.div1}>4.8</div>
+                              <div className={styles.reviewRating}>
+                                <img
+                                  className={styles.fsvgIcon3}
+                                  alt=""
+                                  src="/fsvg.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={styles.platformLogoContainerParent}>
-                      <div className={styles.platformLogoContainer}>
-                        <img
-                          className={styles.googleLogo98081Icon3}
-                          alt=""
-                          src="/googlelogo9808-1@2x.png"
-                        />
-                      </div>
-                      <div className={styles.reviewSeparator}>
-                        <div className={styles.div1}>4.8</div>
-                        <div className={styles.reviewRating}>
-                          <img
-                            className={styles.fsvgIcon3}
-                            alt=""
-                            src="/fsvg.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
+                      <div className={`${styles.testimonial2} h-100`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -409,56 +413,56 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
-                  <div className={styles.testimonialContent}>
-                    <div className={styles.iAttendedAContainer}>
-                      <p className={styles.iAttendedA}>
-                        From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
-                      </p>
+                      <div className={`${styles.testimonial3} h-100`}>
+                        <div className={styles.testimonialContent}>
+                          <div className={styles.iAttendedAContainer}>
+                            <p className={styles.iAttendedA}>
+                              From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
+                            </p>
 
-                    </div>
-                    <div className={styles.info2} />
-                  </div>
-                  <div className={styles.testimonialUser}>
-                    <div className={styles.userImageContainerWrapper}>
-                      <div className={styles.userImageContainer}>
-                        <img
-                          className={styles.avatarIcon3}
-                          alt=""
-                          src="/avatar-4@2x.png"
-                        />
-                        <div className={styles.userCredentials}>
-                          <div className={styles.bhumikaShaldar}>
-                            Bhumika Shaldar
                           </div>
-                          <div className={styles.caAspirant3}>CA Aspirant</div>
+                          <div className={styles.info2} />
+                        </div>
+                        <div className={styles.testimonialUser}>
+                          <div className={styles.userImageContainerWrapper}>
+                            <div className={styles.userImageContainer}>
+                              <img
+                                className={styles.avatarIcon3}
+                                alt=""
+                                src="/avatar-4@2x.png"
+                              />
+                              <div className={styles.userCredentials}>
+                                <div className={styles.bhumikaShaldar}>
+                                  Bhumika Shaldar
+                                </div>
+                                <div className={styles.caAspirant3}>CA Aspirant</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className={styles.platformLogoContainerParent}>
+                            <div className={styles.platformLogoContainer}>
+                              <img
+                                className={styles.googleLogo98081Icon3}
+                                alt=""
+                                src="/googlelogo9808-1@2x.png"
+                              />
+                            </div>
+                            <div className={styles.reviewSeparator}>
+                              <div className={styles.div1}>4.8</div>
+                              <div className={styles.reviewRating}>
+                                <img
+                                  className={styles.fsvgIcon3}
+                                  alt=""
+                                  src="/fsvg.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={styles.platformLogoContainerParent}>
-                      <div className={styles.platformLogoContainer}>
-                        <img
-                          className={styles.googleLogo98081Icon3}
-                          alt=""
-                          src="/googlelogo9808-1@2x.png"
-                        />
-                      </div>
-                      <div className={styles.reviewSeparator}>
-                        <div className={styles.div1}>4.8</div>
-                        <div className={styles.reviewRating}>
-                          <img
-                            className={styles.fsvgIcon3}
-                            alt=""
-                            src="/fsvg.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
+                      <div className={`${styles.testimonial2} h-100`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -500,56 +504,56 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
-                  <div className={styles.testimonialContent}>
-                    <div className={styles.iAttendedAContainer}>
-                      <p className={styles.iAttendedA}>
-                        From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
-                      </p>
+                      <div className={`${styles.testimonial3} h-100`}>
+                        <div className={styles.testimonialContent}>
+                          <div className={styles.iAttendedAContainer}>
+                            <p className={styles.iAttendedA}>
+                              From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
+                            </p>
 
-                    </div>
-                    <div className={styles.info2} />
-                  </div>
-                  <div className={styles.testimonialUser}>
-                    <div className={styles.userImageContainerWrapper}>
-                      <div className={styles.userImageContainer}>
-                        <img
-                          className={styles.avatarIcon3}
-                          alt=""
-                          src="/avatar-4@2x.png"
-                        />
-                        <div className={styles.userCredentials}>
-                          <div className={styles.bhumikaShaldar}>
-                            Bhumika Shaldar
                           </div>
-                          <div className={styles.caAspirant3}>CA Aspirant</div>
+                          <div className={styles.info2} />
+                        </div>
+                        <div className={styles.testimonialUser}>
+                          <div className={styles.userImageContainerWrapper}>
+                            <div className={styles.userImageContainer}>
+                              <img
+                                className={styles.avatarIcon3}
+                                alt=""
+                                src="/avatar-4@2x.png"
+                              />
+                              <div className={styles.userCredentials}>
+                                <div className={styles.bhumikaShaldar}>
+                                  Bhumika Shaldar
+                                </div>
+                                <div className={styles.caAspirant3}>CA Aspirant</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className={styles.platformLogoContainerParent}>
+                            <div className={styles.platformLogoContainer}>
+                              <img
+                                className={styles.googleLogo98081Icon3}
+                                alt=""
+                                src="/googlelogo9808-1@2x.png"
+                              />
+                            </div>
+                            <div className={styles.reviewSeparator}>
+                              <div className={styles.div1}>4.8</div>
+                              <div className={styles.reviewRating}>
+                                <img
+                                  className={styles.fsvgIcon3}
+                                  alt=""
+                                  src="/fsvg.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={styles.platformLogoContainerParent}>
-                      <div className={styles.platformLogoContainer}>
-                        <img
-                          className={styles.googleLogo98081Icon3}
-                          alt=""
-                          src="/googlelogo9808-1@2x.png"
-                        />
-                      </div>
-                      <div className={styles.reviewSeparator}>
-                        <div className={styles.div1}>4.8</div>
-                        <div className={styles.reviewRating}>
-                          <img
-                            className={styles.fsvgIcon3}
-                            alt=""
-                            src="/fsvg.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
+                      <div className={`${styles.testimonial2} h-100`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -591,56 +595,56 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
-                  <div className={styles.testimonialContent}>
-                    <div className={styles.iAttendedAContainer}>
-                      <p className={styles.iAttendedA}>
-                        From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
-                      </p>
+                      <div className={`${styles.testimonial3} h-100`}>
+                        <div className={styles.testimonialContent}>
+                          <div className={styles.iAttendedAContainer}>
+                            <p className={styles.iAttendedA}>
+                              From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
+                            </p>
 
-                    </div>
-                    <div className={styles.info2} />
-                  </div>
-                  <div className={styles.testimonialUser}>
-                    <div className={styles.userImageContainerWrapper}>
-                      <div className={styles.userImageContainer}>
-                        <img
-                          className={styles.avatarIcon3}
-                          alt=""
-                          src="/avatar-4@2x.png"
-                        />
-                        <div className={styles.userCredentials}>
-                          <div className={styles.bhumikaShaldar}>
-                            Bhumika Shaldar
                           </div>
-                          <div className={styles.caAspirant3}>CA Aspirant</div>
+                          <div className={styles.info2} />
+                        </div>
+                        <div className={styles.testimonialUser}>
+                          <div className={styles.userImageContainerWrapper}>
+                            <div className={styles.userImageContainer}>
+                              <img
+                                className={styles.avatarIcon3}
+                                alt=""
+                                src="/avatar-4@2x.png"
+                              />
+                              <div className={styles.userCredentials}>
+                                <div className={styles.bhumikaShaldar}>
+                                  Bhumika Shaldar
+                                </div>
+                                <div className={styles.caAspirant3}>CA Aspirant</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className={styles.platformLogoContainerParent}>
+                            <div className={styles.platformLogoContainer}>
+                              <img
+                                className={styles.googleLogo98081Icon3}
+                                alt=""
+                                src="/googlelogo9808-1@2x.png"
+                              />
+                            </div>
+                            <div className={styles.reviewSeparator}>
+                              <div className={styles.div1}>4.8</div>
+                              <div className={styles.reviewRating}>
+                                <img
+                                  className={styles.fsvgIcon3}
+                                  alt=""
+                                  src="/fsvg.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={styles.platformLogoContainerParent}>
-                      <div className={styles.platformLogoContainer}>
-                        <img
-                          className={styles.googleLogo98081Icon3}
-                          alt=""
-                          src="/googlelogo9808-1@2x.png"
-                        />
-                      </div>
-                      <div className={styles.reviewSeparator}>
-                        <div className={styles.div1}>4.8</div>
-                        <div className={styles.reviewRating}>
-                          <img
-                            className={styles.fsvgIcon3}
-                            alt=""
-                            src="/fsvg.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div className={`${styles.testimonial2} h-100 bg-transparent`}>
+                      <div className={`${styles.testimonial2} h-100`}>
                         <div className={styles.info1} />
                         <div className={styles.anandAcademyIs}>
                           The level of expertise and professionalism demonstrated by the team at AIDIT Pvt. Ltd. is unparalleled. They have successfully managed several complex IT projects for us, “Always delivering on time and within budget”.
@@ -682,55 +686,55 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className={`${styles.testimonial3} h-100 bg-transparent`}>
-                  <div className={styles.testimonialContent}>
-                    <div className={styles.iAttendedAContainer}>
-                      <p className={styles.iAttendedA}>
-                        From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
-                      </p>
+                      <div className={`${styles.testimonial3} h-100`}>
+                        <div className={styles.testimonialContent}>
+                          <div className={styles.iAttendedAContainer}>
+                            <p className={styles.iAttendedA}>
+                              From network management to custom software development, AIDIT offers a comprehensive suite of IT services that cater to all our needs. Their holistic approach means that we have a one-stop shop for everything IT-related, which has been invaluable to our growth and success. They take the time to understand our business and provide solutions that enhance our operations. Their all-encompassing services have allowed us to focus on what we do best, knowing that our IT needs are in capable hands.
+                            </p>
 
-                    </div>
-                    <div className={styles.info2} />
-                  </div>
-                  <div className={styles.testimonialUser}>
-                    <div className={styles.userImageContainerWrapper}>
-                      <div className={styles.userImageContainer}>
-                        <img
-                          className={styles.avatarIcon3}
-                          alt=""
-                          src="/avatar-4@2x.png"
-                        />
-                        <div className={styles.userCredentials}>
-                          <div className={styles.bhumikaShaldar}>
-                            Bhumika Shaldar
                           </div>
-                          <div className={styles.caAspirant3}>CA Aspirant</div>
+                          <div className={styles.info2} />
+                        </div>
+                        <div className={styles.testimonialUser}>
+                          <div className={styles.userImageContainerWrapper}>
+                            <div className={styles.userImageContainer}>
+                              <img
+                                className={styles.avatarIcon3}
+                                alt=""
+                                src="/avatar-4@2x.png"
+                              />
+                              <div className={styles.userCredentials}>
+                                <div className={styles.bhumikaShaldar}>
+                                  Bhumika Shaldar
+                                </div>
+                                <div className={styles.caAspirant3}>CA Aspirant</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className={styles.platformLogoContainerParent}>
+                            <div className={styles.platformLogoContainer}>
+                              <img
+                                className={styles.googleLogo98081Icon3}
+                                alt=""
+                                src="/googlelogo9808-1@2x.png"
+                              />
+                            </div>
+                            <div className={styles.reviewSeparator}>
+                              <div className={styles.div1}>4.8</div>
+                              <div className={styles.reviewRating}>
+                                <img
+                                  className={styles.fsvgIcon3}
+                                  alt=""
+                                  src="/fsvg.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className={styles.platformLogoContainerParent}>
-                      <div className={styles.platformLogoContainer}>
-                        <img
-                          className={styles.googleLogo98081Icon3}
-                          alt=""
-                          src="/googlelogo9808-1@2x.png"
-                        />
-                      </div>
-                      <div className={styles.reviewSeparator}>
-                        <div className={styles.div1}>4.8</div>
-                        <div className={styles.reviewRating}>
-                          <img
-                            className={styles.fsvgIcon3}
-                            alt=""
-                            src="/fsvg.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                     </SwiperSlide>
-                    
+
                   </Swiper>
                 </ul>
               </div>

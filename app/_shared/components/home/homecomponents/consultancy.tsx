@@ -1,13 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Component from "./component";
 import styles from "./consultancy.module.css";
 import ScrollCarousel from "scroll-carousel-react";
+import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 export type ConsultancyType = {
   className?: string;
 };
 
 const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
+  const size = useWindowSize()
   return (
     <section className={[styles.consultancy, className].join(" ")}>
       <div className={styles.consultancyContent}>
@@ -97,8 +104,8 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
               <h1 className={styles.whatValueHas}>What value has it added?</h1>
             </div>
           </div>
-          <div className={styles.valueBenefits}>
-            
+          {size.width > 700 ? <div className={styles.valueBenefits}>
+
             <div className={styles.div}>
               <div className={styles.vectorContainer}>
                 <img
@@ -108,11 +115,10 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                 />
               </div>
               <div className={styles.intelligentDecisionMaking}>
-              Innovative Problem Solving
+                Innovative Problem Solving
               </div>
             </div>
             <div className={styles.div}>
-              {/* <div className={styles.child} /> */}
               <div className={styles.vectorContainer}>
                 <img
                   className={styles.vectorIcon2}
@@ -121,12 +127,11 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                 />
               </div>
               <div className={styles.intelligentDecisionMaking}>
-              Customer Focus
-              Aproach
+                Customer Focus
+                Aproach
               </div>
             </div>
             <div className={styles.div}>
-              {/* <div className={styles.child} /> */}
               <div className={styles.vectorContainer}>
                 <img
                   className={styles.vectorIcon2}
@@ -135,11 +140,10 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                 />
               </div>
               <div className={styles.intelligentDecisionMaking}>
-              Security with regulations
+                Security with regulations
               </div>
             </div>
             <div className={styles.div}>
-              {/* <div className={styles.child} /> */}
               <div className={styles.vectorContainer}>
                 <img
                   className={styles.vectorIcon2}
@@ -148,15 +152,89 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
                 />
               </div>
               <div className={styles.intelligentDecisionMaking}>
-              Sustainability and growth
+                Sustainability and growth
               </div>
             </div>
-            
-            
-          </div>
-         
-          
-         
+
+
+          </div> : 
+          <ul className="h-full w-100 p-0">
+          <Swiper
+        //  pagination={{
+        //   dynamicBullets: true,
+        // }}
+        modules={[Autoplay,Navigation, Pagination, Mousewheel, Keyboard]}
+        autoplay={{
+          "delay": 2500,
+          "disableOnInteraction": false
+        }} 
+        loop={true}
+         >
+            <SwiperSlide>
+            <div className={styles.div}>
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/group-1707478881.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+                Innovative Problem Solving
+              </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className={styles.div}>
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/customer_focus.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+                Customer Focus
+                Aproach
+              </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className={styles.div}>
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/security.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+                Security with regulations
+              </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className={styles.div}>
+              <div className={styles.vectorContainer}>
+                <img
+                  className={styles.vectorIcon2}
+                  alt=""
+                  src="/vector-6.svg"
+                />
+              </div>
+              <div className={styles.intelligentDecisionMaking}>
+                Sustainability and growth
+              </div>
+            </div>
+
+            </SwiperSlide>
+          </Swiper>
+        </ul>
+          }
+
+
+
+
         </div>
 
       </div>
@@ -165,3 +243,25 @@ const Consultancy: React.FC<ConsultancyType> = ({ className = "" }) => {
 };
 
 export default Consultancy;
+
+
+
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}

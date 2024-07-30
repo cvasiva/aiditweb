@@ -16,7 +16,6 @@
   border-image: conic-gradient(var(--color-darkorange), var(--color-darkorange), transparent, transparent, transparent, var(--color-darkorange), var(--color-darkorange)) 1;
   border-radius: 10px;
 } */
-
 .mobileExperienceBackground {
   width: 100%;
   height: 100%;
@@ -34,9 +33,6 @@
   border-radius: 10px; /* Added border-radius property */
   overflow: hidden; /* Ensures child elements respect the border radius */
 }
-
-
-
 .homepageBannerIcon {
   width: 100%;
   /* height: 101.5vh; */
@@ -48,7 +44,6 @@
   right: 0;
   object-fit: cover;
 }
-
 .seamlessBackground {
   height: 25.063rem;
   width: 65.938rem;
@@ -59,12 +54,10 @@
   background-color: var(--color-gray-1000);
   z-index: 1;
 }
-
 .deliverSeamlessMobileWebEx,
 .withOurApplication {
   margin: 0;
 }
-
 .deliverSeamlessMobileContainer {
   margin: 0;
   /* width: 63.25rem; */
@@ -78,7 +71,6 @@
   z-index: 4;
   font-family: inherit;
 }
-
 .seamlessExperience {
   display: flex;
   flex-direction: row;
@@ -87,13 +79,11 @@
   position: relative;
   max-width: 100%;
 }
-
 .titleAndDescription {
   height: 2.938rem;
   width: 13.5rem;
   display: none;
 }
-
 .seamlessExperienceParent {
   display: flex;
   flex-direction: row;
@@ -101,7 +91,6 @@
   justify-content: flex-start;
   max-width: 100%;
 }
-
 .reachMoreCustomers {
   align-self: stretch;
   position: relative;
@@ -118,7 +107,6 @@
   -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.5);
   z-index: 4;
 }
-
 .knowMore {
   position: relative;
   letter-spacing: -0.41px;
@@ -127,14 +115,12 @@
   display: inline-block;
   min-width: 6.188rem;
 }
-
 .knowMoreButton,
 .knowMoreContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
-
 .knowMoreContainer {
   border-radius: 183.07px;
   background: linear-gradient(97.28deg, #ff8e37, #f05306),
@@ -145,7 +131,6 @@
   white-space: nowrap;
   z-index: 4;
 }
-
 .knowMoreContainer:hover {
   border-radius: 183.07px;
   background: var(--color-whitesmoke-700);
@@ -158,7 +143,6 @@
   transition: all 0.5s ease 0s;
   transform: scale(1.1);
 }
-
 .knowMoreButton {
   width: 61.125rem;
   justify-content: center;
@@ -169,7 +153,6 @@
   font-family: var(--font-inter);
   cursor: pointer;
 }
-
 .customerExperience {
   flex: 1;
   display: flex;
@@ -179,7 +162,6 @@
   gap: var(--gap-sm);
   max-width: 100%;
 }
-
 .reachCustomers {
   width: 63.25rem;
   display: flex;
@@ -192,41 +174,35 @@
   font-size: var(--font-size-lg);
   font-family: var(--font-sora);
 }
-
 .dot,
 .dot1,
 .dot2 {
   height: 0.375rem;
   position: relative;
 }
-
 .dot {
   width: 0.938rem;
   border-radius: var(--br-13xl);
   background: linear-gradient(97.28deg, #ff8e37, #f05306),
     linear-gradient(#513ef3, #513ef3), #5c41ff;
 }
-
 .dot1,
 .dot2 {
   width: 0.375rem;
   border-radius: 50%;
   background-color: var(--color-lightslategray-200);
 }
-
 .productView,
 .productView1 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
-
 .productView1 {
   justify-content: flex-start;
   gap: var(--gap-9xs);
   z-index: 4;
 }
-
 .productView {
   width: 63.25rem;
   justify-content: center;
@@ -234,7 +210,6 @@
   box-sizing: border-box;
   max-width: 100%;
 }
-
 .titleAndDescription1,
 .titleAndDescription2 {
   width: 13.5rem;
@@ -242,14 +217,12 @@
   display: none;
   z-index: 5;
 }
-
 .mobileExperience,
 .mobileExperienceWrapper {
   display: flex;
   box-sizing: border-box;
   max-width: 100%;
 }
-
 .mobileExperience {
   width: 74.125rem;
   flex-direction: column;
@@ -261,7 +234,6 @@
   position: relative;
   gap: var(--gap-11xl-6);
 }
-
 .mobileExperienceWrapper {
   align-self: stretch;
   flex-direction: row;
@@ -269,7 +241,6 @@
   justify-content: center;
   /* padding: 0 var(--padding-xl); */
 }
-
 .serviceSuccessChild {
   width: 94.688rem;
   height: 32.125rem;
@@ -278,7 +249,6 @@
   display: none;
   max-width: 100%;
 }
-
 .servicesForThe {
   position: relative;
   letter-spacing: -0.46px;
@@ -288,7 +258,6 @@
   max-width: 78.747rem;
   z-index: 3;
 }
-
 .servicesForTheSuccessOfBrWrapper {
   width: 78.75rem;
   display: flex;
@@ -307,7 +276,6 @@ justify-content: center;
 gap: 40px;
 }
 .sectionmaskGroupIcon {
-  
   width: 100%;
   object-fit: contain;
   position: relative;
@@ -341,9 +309,57 @@ gap: 40px;
   position: relative;
   height: 60vh;
   width: 100%;
-  
+}
+.AditSectionBannerBg{
+  height: 100vh;
+  width: 100%;
+  background-image: url(/desktopbanner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+ position: relative;
+}
+.AditSectionMobileBannerBg{
+  height: 72vh;
+  width: 100%;
+  background-image: url(/mobilebanner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+ position: relative;
+}
+.positionOfHeading{
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  right: 0;
+  top: 30%;
+}
+.positionOfHeadingMobile{
+  width: 75%;
+  position: absolute;
+  left: 15%;
+  right: 0;
+  top: 10%;
 }
 
+.paragraphWhite{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: "Geologica", Helvetica;
+}
+.headingWhite{
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 50px;
+  font-family: "Geologica", Helvetica;
+}
+.headingWhiteMobile{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: "Geologica", Helvetica;
+}
 .frameParent,
 .serviceSuccess {
   align-self: stretch;
@@ -352,20 +368,30 @@ gap: 40px;
   box-sizing: border-box;
   max-width: 100%;
 }
-
 .serviceSuccess {
-  background: linear-gradient(180deg, rgba(9, 20, 64, 0), #030f1c);
+  /* background: linear-gradient(180deg, rgba(9, 20, 64, 0), #030f1c); */
   align-items: center;
   justify-content: flex-end;
   padding: var(--padding-338xl) var(--padding-xl) var(--padding-25xl-8);
   gap: var(--gap-14xl-8);
   z-index: 2;
-  margin-top: -18.375rem;
+  margin-top: -20.375rem;
   font-size: var(--font-size-4xl-1);
   color: var(--color-gray-1100);
   font-family: var(--font-inter);
 }
-
+.serviceSuccessMobile {
+  /* background: linear-gradient(180deg, rgba(9, 20, 64, 0), #030f1c); */
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--padding-338xl) var(--padding-xl) var(--padding-25xl-8);
+  gap: var(--gap-14xl-8);
+  z-index: 2;
+  margin-top: -21.375rem;
+  font-size: var(--font-size-4xl-1);
+  color: var(--color-gray-1100);
+  font-family: var(--font-inter);
+}
 .frameParent {
   align-items: flex-start;
   justify-content: flex-start;
@@ -376,22 +402,18 @@ gap: 40px;
   color: var(--color-whitesmoke-100);
   font-family: var(--font-helvetica);
 }
-
 @media screen and (max-width: 1300px) {
-
   .sectionmaskGroupIcon,
   .servicesForThe {
     max-width: 100%;
   }
 }
-
 @media screen and (max-width: 1100px) {
   .frameParent {
-    padding-bottom: var(--padding-77xl);
+    /* padding-bottom: var(--padding-77xl); */
     box-sizing: border-box;
   }
 }
-
 @media screen and (max-width: 800px) {
   .homepageBannerIcon {
     width: 96.75rem;
@@ -402,50 +424,41 @@ gap: 40px;
     /* left: calc(50% - 760px); */
     object-fit: cover;
   }
-
   .deliverSeamlessMobileContainer {
     /* font-size: var(--font-size-21xl); */
     line-height: 3.188rem;
   }
-
   .mobileExperience {
     gap: var(--gap-mini);
     padding-top: var(--padding-38xl);
     padding-bottom: var(--padding-26xl);
     box-sizing: border-box;
   }
-
   .serviceSuccess {
     gap: var(--gap-mid);
     padding-bottom: var(--padding-10xl);
     box-sizing: border-box;
   }
 }
-
 @media screen and (max-width: 450px) {
   .deliverSeamlessMobileContainer {
     /* font-size: var(--font-size-11xl); */
     line-height: 2.375rem;
   }
-
   .servicesForThe {
     font-size: var(--font-size-lg);
     line-height: 1.375rem;
   }
-
   .frameParent {
-    padding-bottom: var(--padding-43xl);
+    /* padding-bottom: var(--padding-43xl); */
     box-sizing: border-box;
     margin-top: 16%;
   }
-  
 .mobileExperienceBackground {
   width: 100%;
 border: none;
 }
-
 }
-
 .wrapper {
   margin-top: -1rem;
   width: 90%;
@@ -462,19 +475,16 @@ border: none;
     rgba(0, 0, 0, 0)
   );
 }
-
 @keyframes scrollLeft {
   to {
     left: -200px;
   }
 }
-
 @keyframes scrollRight {
   to {
     right: -200px;
   }
 }
-
 .itemLeft,
 .itemRight {
   width: 200px;
@@ -486,45 +496,35 @@ border: none;
   animation-duration: 30s;
   animation-iteration-count: infinite;
 }
-
 .itemLeft {
   left: max(calc(200px * 8), 100%);
   animation-name: scrollLeft;
 }
-
 .itemRight {
   right: max(calc(200px * 8), calc(100% + 200px));
   animation-name: scrollRight;
 }
-
 .item1 {
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
-
 .item2 {
   animation-delay: calc(30s / 8 * (8 - 2) * -1);
 }
-
 .item3 {
   animation-delay: calc(30s / 8 * (8 - 3) * -1);
 }
-
 .item4 {
   animation-delay: calc(30s / 8 * (8 - 4) * -1);
 }
-
 .item5 {
   animation-delay: calc(30s / 8 * (8 - 5) * -1);
 }
-
 .item6 {
   animation-delay: calc(30s / 8 * (8 - 6) * -1);
 }
-
 .item7 {
   animation-delay: calc(30s / 8 * (8 - 7) * -1);
 }
-
 .item8 {
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }

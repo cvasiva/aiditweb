@@ -24,7 +24,7 @@ const ChooseUs: NextPage<ChooseUsType> = ({ className = "" }) => {
             <div className={styles.headingBackground} />
             <div className={`${styles.industryHeading}`}>
               <h1 className={styles.howAiditIs}>
-                <b>AIDIT</b> is leading the <br /> <div className={styles.technologyIndustry}>Tech. Industry</div>
+                <b>AIDIT</b> is leading the <br /> Tech. Industry
               </h1>
               <div className={styles.industryHeadingChild} />
             </div>

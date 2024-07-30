@@ -1124,7 +1124,7 @@
   align-self: stretch;
   flex-direction: row;
   justify-content: center;
-  padding: 4rem var(--padding-xl) var(--padding-146xl);
+  padding: 0rem var(--padding-xl) 1rem;
   box-sizing: border-box;
   flex-shrink: 0;
   text-align: center;

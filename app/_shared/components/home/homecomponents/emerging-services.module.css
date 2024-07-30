@@ -27,6 +27,18 @@
   color: #555555;
   font-weight: 300;
 }
+.seamlessIntegrationForMob {
+  flex: 1;
+  position: relative;
+  line-height: 1.688rem;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+  font-family: "Geologica", Helvetica;
+  color: #555555;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
 .emergingDescription,
 .emergingServicesHeading {
   display: flex;

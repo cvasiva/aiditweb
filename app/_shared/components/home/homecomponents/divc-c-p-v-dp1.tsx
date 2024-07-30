@@ -17,7 +17,7 @@ const DivcCPVDp1: NextPage<DivcCPVDp1Type> = ({ className = "" }) => {
         <div className={styles.companyInfo}>
           <div className={styles.brandContainer}>
             <div className={styles.brandNameContainer}>
-              <b className={styles.aidit}>AIDIT</b>
+              <b>AIDIT</b>
             </div>
             <div className={styles.transformingFutureTogether}>
               Transforming Future. Together
