@@ -110,59 +110,100 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
               {size.width > 700 ? <div className={styles.reachMoreCustomers}>
                 {item.caption}
               </div> : ""}
-              <div className={styles.knowMoreButton}>
-                <div className={styles.knowMoreContainer}>
-                  <div className={styles.knowMore}>Know More</div>
-                </div>
-              </div>
+
             </div>
           </div>
           <div className={styles.titleAndDescription1} />
           <div className={styles.titleAndDescription2} />
         </div>
       </div>
-      <div className={styles.serviceSuccess}>
-        <div className={styles.serviceSuccessChild} />
-        <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
-              <div className={styles.wrapper}>
-                <img src="./L1.png" className={ `${styles.itemLeft} ${styles.item1}`}/>
-                <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`}/>
-                <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`}/>
-                <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`}/>
-                <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`}/>
-                <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`}/>
-              </div>
-            </div>
-      </div>
+
     </CarouselItem>
   ));
   return (
     <>
       <section className={[styles.frameParent, className].join(" ")}>
         {size.width > 700 ?
-          <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-          </Carousel>
-          : <div className="position-relative w-100">
-            <img src="./AditBannerBg.png" className={styles.sliderBg} />
-            <div className={styles.positionBanner}>
-              <BannerSlider data={dataSlider} size={size} />
-            </div>
-            <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
-              <div className={styles.wrapper}>
-                <img src="./L1.png" className={ `${styles.itemLeft} ${styles.item1}`}/>
-                <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`}/>
-                <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`}/>
-                <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`}/>
-                <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`}/>
-                <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`}/>
+          // <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
+          //   <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+          //   {slides}
+          //   <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+          //   <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+          // </Carousel>
+          <div className={styles.AditSectionBannerBg} >
+            <div className={styles.positionOfHeading}>
+              <div className={styles.headingWhite}>Enhance Digital Experiences with our development service</div>
+              <div className={`${styles.paragraphWhite} mt-3`}>Build custom mobile & web applications that are responsive, scalable, and user business centric design.</div>
+              <div className={`${styles.knowMoreButton} mt-4`}>
+                <div className={styles.knowMoreContainer}>
+                  <div className={styles.knowMore}>Know More</div>
+                </div>
+              </div>
+              <div className="mt-5 pt-5">
+                <div className={`${styles.paragraphWhite} mt-5 pt-3`}>Team of excellence from brilliant companies</div>
+                <div className={styles.serviceSuccess}>
+                  <div className={styles.serviceSuccessChild} />
+                  <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+                    <div className={styles.wrapper}>
+                      <img src="./L1.png" className={`${styles.itemLeft} ${styles.item1}`} />
+                      <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`} />
+                      <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`} />
+                      <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`} />
+                      <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`} />
+                      <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`} />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>}
+          </div>
+          :
+          // <div className="position-relative w-100">
+          //   <img src="./AditBannerBg.png" className={styles.sliderBg} />
+          //   <div className={styles.positionBanner}>
+          //     <BannerSlider data={dataSlider} size={size} />
+          //   </div>
+          //   <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+          //     <div className={styles.wrapper}>
+          //       <img src="./L1.png" className={`${styles.itemLeft} ${styles.item1}`} />
+          //       <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`} />
+          //       <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`} />
+          //       <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`} />
+          //       <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`} />
+          //       <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`} />
+          //     </div>
+          //   </div>
+          // </div>
+          <div className={styles.AditSectionMobileBannerBg} >
+            <div className={styles.positionOfHeadingMobile}>
+              <div className={styles.headingWhiteMobile}>Enhance Digital Experiences with our development service</div>
+              <div className={`${styles.paragraphWhite} mt-3`}>Build custom mobile & web applications that are responsive, scalable, and user business centric design.</div>
+              <div className={`${styles.knowMoreButton} mt-4`}>
+                <div className={styles.knowMoreContainer}>
+                  <div className={styles.knowMore}>Know More</div>
+                </div>
+              </div>
+              <div className=" pt-5">
+                <div className={`${styles.paragraphWhite}  pt-3`}>Team of excellence from brilliant companies</div>
+                <div className={styles.serviceSuccessMobile}>
+                  <div className={styles.serviceSuccessChild} />
+                  <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+                    <div className={styles.wrapper}>
+                      <img src="./L1.png" className={`${styles.itemLeft} ${styles.item1}`} />
+                      <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`} />
+                      <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`} />
+                      <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`} />
+                      <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`} />
+                      <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       </section>
+
     </>
   );
 };
@@ -182,6 +223,6 @@ function useWindowSize() {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, []); 
+  }, []);
   return windowSize;
 }

@@ -4,7 +4,7 @@ import GroupComponent from "./group-component";
 import styles from "./emerging-services.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 export type EmergingServicesType = {
   className?: string;
 };
@@ -15,6 +15,7 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const size = useWindowSize()
   return (
     <section className={[styles.emergingServices, className].join(" ")}>
       <div className={styles.emergingServicesContent}>
@@ -25,10 +26,15 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
               Our Emerging Services
             </h1>
             <div className={styles.emergingDescription}>
-              <div className={styles.seamlessIntegrationFor}>
+            {size.width > 700 ?<div className={styles.seamlessIntegrationFor}>
                 Seamless Integration for a Future Defined by Efficiency,
                 Security, and Digital Excellence
               </div>
+              : <div className={styles.seamlessIntegrationForMob}>
+              Seamless Integration for a Future <br/> Defined by Efficiency,
+              Security, and <br/> Digital Excellence
+            </div>}
+              
             </div>
           </div>
         </div>
@@ -138,3 +144,23 @@ const EmergingServices: NextPage<EmergingServicesType> = ({
 };
 
 export default EmergingServices;
+
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}

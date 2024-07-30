@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import styles from "./frame-component1.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { useEffect, useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,7 +15,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   const size = useWindowSize()
   return (
     <section className={[styles.homeInner, className].join(" ")}>
-      <div className={styles.productsBenefitsParent}>
+      <div className={`${styles.productsBenefitsParent} pt-2`}>
         <div className={styles.productsBenefits}>
           <div className={styles.productsTitle}>
             <div className={styles.availableProductsLabel}>
@@ -101,11 +101,15 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
               <div className=" h-screen">
                 <ul className="h-full w-100 p-0">
                   <Swiper
-                    navigation
-                    // pagination={{ type: "bullets", clickable: true }}
-                    autoplay={false}
-                    loop={false}
-                    modules={[Autoplay, Navigation, Pagination]}
+                     pagination={{
+                      dynamicBullets: true,
+                    }}
+                    modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
+                    autoplay={{
+                      "delay": 2500,
+                      "disableOnInteraction": false
+                    }}
+                    loop={true}
                   >
                     <SwiperSlide>
                       <div className={styles.service3}>
