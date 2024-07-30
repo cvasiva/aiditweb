@@ -178,7 +178,7 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
                         </Link>
                       </div>
                       <div className={styles.resourceButtonWrapper}>
-                        <div className={styles.resourceButton}>
+                        <a href="https://wa.me/916303790179?text=Hello I am looking for support with website development, Graphic design, SEO, or lead generation services" target="_blank" rel="noopener noreferrer" className={`${styles.itemButton5} ${styles.resourceButton}`}>
                           <div className={styles.resourceButtonContainer}>
                             <a className={styles.itemButton5}>Contact</a>
                           </div>
@@ -191,7 +191,7 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
                               src="/group.svg"
                             />
                           </div>
-                        </div>
+                        </a>
                       </div>
                     </div>
                   </div>
