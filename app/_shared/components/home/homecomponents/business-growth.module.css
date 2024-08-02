@@ -17,11 +17,12 @@
 }
 
 .representationUserExperienceIcon {
-  width: 59.7rem;
+  width: 100%;
   height: 28.363rem;
   position: relative;
   margin: 0 !important;
   right: 0rem;
+  left: 0;
   /* left: 0; */
   object-fit: cover;
 }
@@ -29,6 +30,9 @@
 .flexclasdata{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .growthContent {
@@ -136,6 +140,7 @@
   .flexclasdata{
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
 @media screen and (max-width: 450px) {

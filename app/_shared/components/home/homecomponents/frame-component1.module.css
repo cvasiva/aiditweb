@@ -55,7 +55,6 @@
 }
 
 .section {
-  width: 10.063rem;
   border-radius: var(--br-981xl);
   background-color: var(--color-whitesmoke-200);
   justify-content: flex-start;
@@ -1115,6 +1114,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-88xl);
+  padding-top: 5%;
 }
 
 

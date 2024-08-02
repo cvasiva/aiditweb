@@ -33,10 +33,11 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
           <header className={styles.rectangleParent}>
             <div className={styles.frameChild} />
             <div className={styles.heroContent}>
-              <div className={styles.heroTitle}>
+              {/* <div className={styles.heroTitle}>
                 <a className={styles.aidit}>AIDIT</a>
               </div>
-              <a className={styles.taglineChange}>TAGLINE CHANGE</a>
+              <a className={styles.taglineChange}>TAGLINE CHANGE</a> */}
+              <img src="./llogo.png" alt="logo" style={{width:"110%"}}/>
             </div>
             <nav className={styles.developerResources}>
               <nav className={styles.solutionDevelopers}>
@@ -104,7 +105,8 @@ const Main: NextPage<MainType> = ({ className = "" }) => {
       <div className={styles.dnonenav}>
         <div className={colorChange ? `${styles.rectangleParent}` : `${styles.rectangleParent}`}>
           <div className={styles.heroTitle}>
-            <a className={styles.aidit}>AIDIT</a>
+            {/* <a className={styles.aidit}>AIDIT</a> */}
+            <img src="./llogo.png" alt="logo" style={{width:"45%"}}/>
           </div>
           <div onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (

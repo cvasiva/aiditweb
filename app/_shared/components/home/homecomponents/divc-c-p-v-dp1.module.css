@@ -400,13 +400,13 @@
 
   .divcCpvdp {
     align-self: stretch;
-    background: linear-gradient(
+    /* background: linear-gradient(
       90deg,
       transparent,
       rgba(251, 250, 242, 0.2) 25%,
       rgba(251, 250, 242, 0.2) 75%,
       transparent
-    );
+    ); */
     flex-direction: column;
     padding: 0.5rem;
     gap: var(--gap-5xl);

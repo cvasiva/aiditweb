@@ -15,7 +15,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
   const size = useWindowSize()
   return (
     <section className={[styles.homeInner, className].join(" ")}>
-      <div className={`${styles.productsBenefitsParent} pt-2`}>
+      <div className={`${styles.productsBenefitsParent}`}>
         <div className={styles.productsBenefits}>
           <div className={styles.productsTitle}>
             <div className={styles.availableProductsLabel}>

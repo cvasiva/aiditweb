@@ -1,8 +1,11 @@
 import React from 'react'
+import About from '../about/about'
 
 const Resources = () => {
   return (
-    <div>Resources page siva </div>
+    <div>
+      <About />
+    </div>
   )
 }
 

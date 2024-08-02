@@ -19,7 +19,7 @@ const BusinessGrowth: NextPage<BusinessGrowthType> = ({ className = "" }) => {
               </div>
             </div>
             <div className={styles.elevateYourDigitalContainer}>
-              <span>Elevate your <br/> digital business with</span>
+              <span>Elevate your <br /> digital business with</span>
               <span className="fw-bold ms-3">AIDIT</span>
             </div>
           </div>
@@ -28,11 +28,13 @@ const BusinessGrowth: NextPage<BusinessGrowthType> = ({ className = "" }) => {
           </div>
 
         </div>
-        <img
-          className={styles.representationUserExperienceIcon}
-          alt=""
-          src="/representationuserexperienceinterfacedesign-3-2@2x.png"
-        />
+        <div>
+          <img
+            className={styles.representationUserExperienceIcon}
+            alt=""
+            src="/representationuserexperienceinterfacedesign-3-2@2x.png"
+          />
+        </div>
       </div>
     </>
   );

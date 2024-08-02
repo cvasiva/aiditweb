@@ -492,7 +492,6 @@
 .consultancyTitle {
   position: absolute;
   top: 0;
-  left: 1.25rem;
   border-radius: 52.42px;
   background-color: var(--color-black);
   width: 87.313rem;
@@ -558,14 +557,16 @@
   width: 92.188rem;
   position: relative;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .consultancy {
   align-self: stretch;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   padding: 0 0 var(--padding-127xl);
   box-sizing: border-box;
   max-width: 100%;

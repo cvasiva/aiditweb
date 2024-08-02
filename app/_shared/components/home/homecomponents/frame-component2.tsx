@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import type { NextPage } from "next";
 import styles from "./frame-component2.module.css";
-import dataSlider from './slider.json'
+// import dataSlider from './slider.json'
 export type FrameComponent2Type = {
   className?: string;
 };
@@ -12,7 +14,7 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 import { useEffect, useState } from "react";
-import BannerSlider from "./BannerSlider";
+// import BannerSlider from "./BannerSlider";
 
 interface Item {
   src: string;
@@ -123,13 +125,8 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
   return (
     <>
       <section className={[styles.frameParent, className].join(" ")}>
-        {size.width > 700 ?
-          // <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} style={{ width: "100%", height: "100%" }}>
-          //   <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-          //   {slides}
-          //   <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-          //   <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-          // </Carousel>
+        {/* {size.width > 700 ?
+
           <div className={styles.AditSectionBannerBg} >
             <div className={styles.positionOfHeading}>
               <div className={styles.headingWhite}>Enhance Digital Experiences with our development service</div>
@@ -158,22 +155,7 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
             </div>
           </div>
           :
-          // <div className="position-relative w-100">
-          //   <img src="./AditBannerBg.png" className={styles.sliderBg} />
-          //   <div className={styles.positionBanner}>
-          //     <BannerSlider data={dataSlider} size={size} />
-          //   </div>
-          //   <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
-          //     <div className={styles.wrapper}>
-          //       <img src="./L1.png" className={`${styles.itemLeft} ${styles.item1}`} />
-          //       <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`} />
-          //       <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`} />
-          //       <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`} />
-          //       <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`} />
-          //       <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`} />
-          //     </div>
-          //   </div>
-          // </div>
+          
           <div className={styles.AditSectionMobileBannerBg} >
             <div className={styles.positionOfHeadingMobile}>
               <div className={styles.headingWhiteMobile}>Enhance Digital Experiences with our development service</div>
@@ -201,7 +183,43 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }, Exam
               </div>
             </div>
           </div>
-        }
+        } */}
+        <div className={styles.bgcolor}>
+          <div className={styles.bghome}>
+            <div className={styles.United}>
+              <div className={styles.unitgap}>
+                <div>
+                  <div className={styles.unitfont}>United</div>
+                  <div className={styles.Wefont}>We Thrive</div>
+                </div>
+                <p className={styles.netfont}>Networking and security. Strong on their own.
+                  Unbeatable together.</p>
+                <div>
+                  <button className={styles.knowMoreContainer}>Learn More</button>
+                </div>
+              </div>
+            </div>
+            <div className={styles.homeorder}>
+              <img src="./homeimg.png" alt="homeimg" style={{ width: "100%" }} />
+            </div>
+          </div>
+          <div className=" py-5">
+            <div className={`${styles.paragraphWhite}  pt-3`}>Team of excellence from brilliant companies</div>
+            <div className={styles.serviceSuccessMobile}>
+              <div className={`${styles.positionLogos}  d-flex justify-content-center m-auto`}>
+                <div className={styles.wrapper}>
+                  <img src="./L1.png" className={`${styles.itemLeft} ${styles.item1}`} />
+                  <img src="./L2.png" className={`${styles.itemLeft} ${styles.item2}`} />
+                  <img src="./L3.png" className={`${styles.itemLeft} ${styles.item3}`} />
+                  <img src="./L4.png" className={`${styles.itemLeft} ${styles.item4}`} />
+                  <img src="./L5.png" className={`${styles.itemLeft} ${styles.item5}`} />
+                  <img src="./L6.png" className={`${styles.itemLeft} ${styles.item6}`} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
     </>

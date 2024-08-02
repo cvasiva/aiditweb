@@ -229,6 +229,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-46xl);
+  padding-top: 5%;
 }
 .accomplishments {
   align-self: stretch;
